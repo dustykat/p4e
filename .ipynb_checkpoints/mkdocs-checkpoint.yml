@@ -3,6 +3,8 @@ site_name: P4E
 nav:
   - Home: index.md
   - About: about.md
+  - Chapters:
+     - Introduction: ./introduction/introduction.md
 
 # active theme (mkdocs/readthedocs are free, they work differently wrt code blocks)
 theme:
