@@ -5,6 +5,7 @@
 Copyright © 2021 Theodore G. Cleveland, Farhang Forghanparast, Dinesh Sundaravadivelu Devarajan, Turgut Batuhan Baturalp (Batu), Tanja Karp, Long Nguyen, and Mona Rizvi. *The contents of this book are licensed for free consumption under the following license:* [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)](https://creativecommons.org/licenses/by-nc-nd/4.0/).
 
 Introduction to Computational Thinking and Data Science: 
+
 - Computational thinking concepts 
 - Data science and practices 
 - JupyterLab (iPython) as a programming environment 
@@ -28,9 +29,9 @@ Introduction to Computational Thinking and Data Science:
 
 Computational thinking (CT) refers to the thought processes involved in expressing solutions as computational steps or algorithms that can be carried out by a computer. 
 
-Much of what follows is borrowed from (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2696102/).
+Much of what follows is borrowed from [https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2696102/](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2696102/).
 
-Computational thinking is taking an approach to solving problems, designing systems and understanding human behaviour that draws on concepts fundamental to computing (http://www.cs.cmu.edu/~15110-s13/Wing06-ct.pdf).
+Computational thinking is taking an approach to solving problems, designing systems and understanding human behaviour that draws on concepts fundamental to computing [http://www.cs.cmu.edu/~15110-s13/Wing06-ct.pdf](http://www.cs.cmu.edu/~15110-s13/Wing06-ct.pdf).
 
 Computational thinking is a kind of analytical thinking:
 
