@@ -86,6 +86,7 @@
         <li class="main active"><a href="#python-and-data-science-for-engineers-a-webbook-to-accompany-engr-1330-computational-thinking-and-data-science-at-texas-tech-university">Python (and Data Science) for Engineers:  A WebBook to Accompany  "ENGR-1330 Computational Thinking and Data Science"  at Texas Tech University </a></li>
             <li><a href="#introduction">Introduction</a></li>
             <li><a href="#document-history">Document History</a></li>
+            <li><a href="#authordeveloper-notes">Author/Developer Notes</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
@@ -101,7 +102,82 @@
 <p>suggested citation: </p>
 <p><font color=magenta>Theodore G. Cleveland, Farhang Forghanparast, Dinesh Sundaravadivelu Devarajan, Turgut Batuhan Baturalp (Batu), Tanja Karp, Long Nguyen, and Mona Rizvi. (2021) * Python (and Data Science) for Engineers: A WebBook to Accompany ENGR 1330 at TTU *, Whitacre College of Engineering, DOI (pending) <a href="https://3.137.111.182/p4e/">https://3.137.111.182/p4e/</a></font></p>
 <h2 id="document-history">Document History</h2>
-<p>This document is a living document and is updated frequently, Python is an ever evolving tool and stuff that works today will be constructively broken by the development team (python.org) in their quest for continuous improvement.  Generally these changes occur in the packages (libraries, external modules) and base python is quite stable.  The scripts herein are intended for use with Python 3.X installations, and may not be backward compatable.</p></div>
+<p>This document is a living document and is updated frequently, Python is an ever evolving tool and stuff that works today will be constructively broken by the development team (python.org) in their quest for continuous improvement.  Generally these changes occur in the packages (libraries, external modules) and base python is quite stable.  The scripts herein are intended for use with Python 3.X installations, and may not be backward compatable.</p>
+<h2 id="authordeveloper-notes">Author/Developer Notes</h2>
+<h3 id="hardware-requirements">Hardware Requirements</h3>
+<p>The lead author built this webbook on a Raspberry Pi 4B (4GB) running Ubuntu 20.XX, an Apache Web Server, a JupyterHub (fully encrypted) with iPython extensions, R core, Latex, and MkDocs with extensions.  The deployment hardware is an Amazon Web Services Virtual Private Server (Lightsail Instance) in the West Virginia Server Farm (typically the container is run on x86-64 Xeon hardware).</p>
+<p>Direct editing and build on the AWS server is possible, but the typesetting may not render correctly; additionally running some of the notebooks will use up the daily allocation of compute time on the server and the whole thing will simply stall for awhile; Its better to do all the development and testing on the Raspberry PI or a laptop, then push changes to the AWS deployment.  </p>
+<p>The Raspberry Pi 4B development server's entire filesystem is cloned weekly (roughly 1/2 TB; it takes 12 hours, during which it is inaccessible) </p>
+<p>A current working backup is maintained at <a href="https://github.com/dustykat/p4e">https://github.com/dustykat/p4e</a>.</p>
+<h3 id="github-p4e-repository">GitHub P4E repository</h3>
+<p>The purpose of the repository is to maintain a convienent back-up of course content and for simple deployment.
+The typical method used is to:</p>
+<ol>
+<li>Develop a chapter on the Raspberry Pi 4B.  When you are happy with the added content, then </li>
+<li>Build the book e.g. <code>sensei@atomickitty:~/p4e$ mkdocs build</code>  wait until completed; observe warnings, fix any errors, then </li>
+<li>Update the repository e.g. <code>sensei@atomickitty:~/p4e$ git add . &amp;&amp; git commit -m "add introduction" &amp;&amp; git push</code>, when prompted for the SSH passphrase, supply it.  This action pushes changes to GitHub and updates the repository.</li>
+<li>Login to the AWS instance, and navigate to the host location where you store the deployment version and pull the changes e.g. <code>sensei@ip-172-26-4-2:~/p4e$ git pull</code> (notice the subtle prompt change, we are on a different machine)</li>
+<li>Deal with any errors - the pull is a fast forward merge, and sometimes fails, errors are usually fixable easily. </li>
+</ol>
+<h4 id="special-notes">Special Notes</h4>
+<ol>
+<li>
+<p>The structure is written to work on a web host, with hostname == <code>atomickitty.ddns.net::3.137.111.182</code>, if you clone to another server you will have the lovely task of changing the links.  The string editor <code>sed</code> will become your friend!  Most of the internal links use the IP address, although some use the DNS entry - this is a result of when the particular content was created; I have tried recently to stick with the IP notation, as i think it is easier to edit using <code>sed</code> when the content needs to move to a different host.</p>
+</li>
+<li>
+<p>Materials herein come from many sources. Sources in notebooks are at least cited by a URL.  As the content matures, proper citations are to be inserted.</p>
+</li>
+</ol>
+<h4 id="how-to-use">How to Use</h4>
+<ol>
+<li>Clone the entire repository to /var/www/html/p4e.  Have your main index point to this directory i.e. <code>http://your-fqdn-server.org/p4e/site/</code>
+You can see working example at https://3.137.111.182/p4e/ (You will have to set a browser exception to accept the self-signed certificate)</li>
+</ol>
+<h4 id="syncronization-notes">Syncronization Notes:</h4>
+<ol>
+<li>Sync with 3.137.111.182/p4e/ (AWS server -- primary and live website copy)</li>
+<li>Sync with 75.3.84.227::192.168.1.75/ (Raspberry Pi -- developer and backup website copy)</li>
+<li>Sync with 75.3.84.227::192.168.1.79/ (Macintosh -- developer copy)</li>
+</ol>
+<h3 id="on-line-book-authors-notes-how-to">On-Line Book Author's Notes (How to ....)</h3>
+<p>All the pages are written in a JupyterLab notebook, then rendered as a markdown file.  The website builder reads the markdown file(s) as directed by the <code>mkdocs.yml</code> to build the pages you see on the browser.  It sounds elaborate, but is quite straightforward after some work with the system.</p>
+<ul>
+<li>Inserting Code Fragments</li>
+</ul>
+<p>To insert a code fragment such as <code>print('Hello World')</code> simply indent in the source file used to generate the document</p>
+<pre><code>print('hello world')
+</code></pre>
+<p>These fragments can be cut-and-paste into a JupyterLab notebook.  The source JupyterLab notebook when rendered as markdown, does the indentation automatically.</p>
+<ul>
+<li>Inserting Images</li>
+</ul>
+<p>If the image is taken from a URL, use the following in a Markdown cell:</p>
+<pre><code>![image-name](url_to_image_source)
+</code></pre>
+<p>The image will be displayed the <code>[image-name]</code> tag can be empty.</p>
+<p>Such as:</p>
+<pre><code>![image-name](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqn40YbupkMAzY63jYtA6auEmjRfCOvCd0FA&amp;usqp=CAU)
+</code></pre>
+<p>Which will render a black swan:</p>
+<p><img alt="image-name" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqn40YbupkMAzY63jYtA6auEmjRfCOvCd0FA&amp;usqp=CAU" /></p>
+<p>If the image is local to the host replace the url with the path to the image; if you anticipate the path on the deployment server, then the image can be used as an html link.</p>
+<ul>
+<li>Inserting URL links</li>
+</ul>
+<p>This is a variation of images, but without the <code>!</code>, such as</p>
+<pre><code>[link-name-that-will-display](url_to_link_destimation)
+</code></pre>
+<p>For example the code below will link to the black swan search results:</p>
+<pre><code>[link-to-images-of-black-swans](https://www.google.com/search?q=images+of+black+swan&amp;client=safari&amp;rls=en&amp;sxsrf=ALeKk03oIoQ387TWjJoKzX-D_b7o1to43Q:1613002985584&amp;tbm=isch&amp;source=iu&amp;ictx=1&amp;fir=L2P5MiS1ICLTxM%252CC6BDdJoXT9KcEM%252C_&amp;vet=1&amp;usg=AI4_-kTXrBMpj__xL5IkGCshrXTp04fX3w&amp;sa=X&amp;ved=2ahUKEwiCneivyODuAhVJBs0KHY88CaAQ9QF6BAgUEAE&amp;biw=1447&amp;bih=975#imgrc=i_lxoojURNE3XM)
+</code></pre>
+<p><a href="https://www.google.com/search?q=images+of+black+swan&amp;client=safari&amp;rls=en&amp;sxsrf=ALeKk03oIoQ387TWjJoKzX-D_b7o1to43Q:1613002985584&amp;tbm=isch&amp;source=iu&amp;ictx=1&amp;fir=L2P5MiS1ICLTxM%252CC6BDdJoXT9KcEM%252C_&amp;vet=1&amp;usg=AI4_-kTXrBMpj__xL5IkGCshrXTp04fX3w&amp;sa=X&amp;ved=2ahUKEwiCneivyODuAhVJBs0KHY88CaAQ9QF6BAgUEAE&amp;biw=1447&amp;bih=975#imgrc=i_lxoojURNE3XM">link-to-images-of-black-swans</a></p>
+<ul>
+<li>Typesetting mathematics</li>
+</ul>
+<p>In a markdown cell use "<script type="math/tex">math goes here</script>".  For example, the latex gibberish F(x)=\int{f(\tau)d\tau}^{\tau}_{-\Inf} when surrounded by "$" symbol renders:</p>
+<p>
+<script type="math/tex">F(x)=\int{f(\tau)d\tau}^{\tau}_{-\Inf}</script>
+</p></div>
         </div>
 
         <footer class="col-md-12">
@@ -186,5 +262,5 @@
 
 <!--
 MkDocs version : 1.0.4
-Build Date UTC : 2021-06-09 13:36:22
+Build Date UTC : 2021-06-09 14:09:59
 -->
