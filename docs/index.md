@@ -96,6 +96,8 @@ For example the code below will link to the black swan search results:
 
 - Typesetting mathematics
 
-In a markdown cell use "$math goes here$".  For example, the latex gibberish F(x)=\int{f(\tau)d\tau}^{\tau}_{-\Inf} when surrounded by "$" symbol renders:
+In a markdown cell use dollar signs to delimit mathematics.  A leading and trailing pair (4 characters) centers the results.  In-line leading and trailing (2 characters) left justifies the result  For example, the latex gibberish F(x)=\int^{\tau}_{-\infy}{f(\tau)d\tau} when surrounded by "$" symbol renders:
 
-$F(x)=\int{f(\tau)d\tau}^{\tau}_{-\Inf}$
+$F(x)=\int^{\tau}_{-\infy}{f(\tau)d\tau}$
+
+
