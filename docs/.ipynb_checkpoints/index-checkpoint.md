@@ -52,11 +52,11 @@ You can see working example at https://3.137.111.182/p4e/ (You will have to set 
 2. Sync with 75.3.84.227::192.168.1.75/ (Raspberry Pi -- developer and backup website copy)
 3. Sync with 75.3.84.227::192.168.1.79/ (Macintosh -- developer copy)
 
-### On-Line Book Author's Notes (How to ....)
+## Author's Notes (How to ....)
 
 All the pages are written in a JupyterLab notebook, then rendered as a markdown file.  The website builder reads the markdown file(s) as directed by the `mkdocs.yml` to build the pages you see on the browser.  It sounds elaborate, but is quite straightforward after some work with the system.
 
-- Inserting Code Fragments
+### Inserting Code Fragments
 
 To insert a code fragment such as `print('Hello World')` simply indent in the source file used to generate the document
 
@@ -64,7 +64,9 @@ To insert a code fragment such as `print('Hello World')` simply indent in the so
     
 These fragments can be cut-and-paste into a JupyterLab notebook.  The source JupyterLab notebook when rendered as markdown, does the indentation automatically.
 
-- Inserting Images
+There is a fencing option also, you should test the cut-and-paste to be sure you don't have hidden resource dependencies, if you do just add the code to get the resources and re-render the Markdown file.
+
+### Inserting Images
 
 If the image is taken from a URL, use the following in a Markdown cell:
 
@@ -82,7 +84,7 @@ Which will render a black swan:
 
 If the image is local to the host replace the url with the path to the image; if you anticipate the path on the deployment server, then the image can be used as an html link.
 
-- Inserting URL links
+### Inserting URL links
 
 This is a variation of images, but without the `!`, such as
 
@@ -94,10 +96,24 @@ For example the code below will link to the black swan search results:
 
 [link-to-images-of-black-swans](https://www.google.com/search?q=images+of+black+swan&client=safari&rls=en&sxsrf=ALeKk03oIoQ387TWjJoKzX-D_b7o1to43Q:1613002985584&tbm=isch&source=iu&ictx=1&fir=L2P5MiS1ICLTxM%252CC6BDdJoXT9KcEM%252C_&vet=1&usg=AI4_-kTXrBMpj__xL5IkGCshrXTp04fX3w&sa=X&ved=2ahUKEwiCneivyODuAhVJBs0KHY88CaAQ9QF6BAgUEAE&biw=1447&bih=975#imgrc=i_lxoojURNE3XM)
 
-- Typesetting mathematics
+### Typesetting mathematics
 
-In a markdown cell use dollar signs to delimit mathematics.  A leading and trailing pair (4 characters) centers the results.  In-line leading and trailing (2 characters) left justifies the result  For example, the latex gibberish F(x)=\int^{\tau}_{-\infty}{f(\tau)d\tau} when surrounded by "$" symbol renders:
+In a markdown cell use dollar signs to delimit mathematics.  A leading and trailing pair (4 characters) centers the results.  In-line leading and trailing (2 characters) left justifies the result  For example, the latex gibberish 
+
+F(x)=\int^{\tau}_{-\infty}{f(\tau)d\tau} 
+    
+when surrounded by single pair dollar symbol 
+
+    $F(x)=\int^{\tau}_{-\infty}{f(\tau)d\tau}$
+
+renders:
 
 $F(x)=\int^{\tau}_{-\infty}{f(\tau)d\tau}$
+
+To center use a double pair
+
+    $$F(x)=\int^{\tau}_{-\infty}{f(\tau)d\tau}$$
+
+$$F(x)=\int^{\tau}_{-\infty}{f(\tau)d\tau}$$
 
 

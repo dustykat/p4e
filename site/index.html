@@ -87,6 +87,7 @@
             <li><a href="#introduction">Introduction</a></li>
             <li><a href="#document-history">Document History</a></li>
             <li><a href="#authordeveloper-notes">Author/Developer Notes</a></li>
+            <li><a href="#authors-notes-how-to">Author's Notes (How to ....)</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
@@ -139,18 +140,15 @@ You can see working example at https://3.137.111.182/p4e/ (You will have to set 
 <li>Sync with 75.3.84.227::192.168.1.75/ (Raspberry Pi -- developer and backup website copy)</li>
 <li>Sync with 75.3.84.227::192.168.1.79/ (Macintosh -- developer copy)</li>
 </ol>
-<h3 id="on-line-book-authors-notes-how-to">On-Line Book Author's Notes (How to ....)</h3>
+<h2 id="authors-notes-how-to">Author's Notes (How to ....)</h2>
 <p>All the pages are written in a JupyterLab notebook, then rendered as a markdown file.  The website builder reads the markdown file(s) as directed by the <code>mkdocs.yml</code> to build the pages you see on the browser.  It sounds elaborate, but is quite straightforward after some work with the system.</p>
-<ul>
-<li>Inserting Code Fragments</li>
-</ul>
+<h3 id="inserting-code-fragments">Inserting Code Fragments</h3>
 <p>To insert a code fragment such as <code>print('Hello World')</code> simply indent in the source file used to generate the document</p>
 <pre><code>print('hello world')
 </code></pre>
 <p>These fragments can be cut-and-paste into a JupyterLab notebook.  The source JupyterLab notebook when rendered as markdown, does the indentation automatically.</p>
-<ul>
-<li>Inserting Images</li>
-</ul>
+<p>There is a fencing option also, you should test the cut-and-paste to be sure you don't have hidden resource dependencies, if you do just add the code to get the resources and re-render the Markdown file.</p>
+<h3 id="inserting-images">Inserting Images</h3>
 <p>If the image is taken from a URL, use the following in a Markdown cell:</p>
 <pre><code>![image-name](url_to_image_source)
 </code></pre>
@@ -161,9 +159,7 @@ You can see working example at https://3.137.111.182/p4e/ (You will have to set 
 <p>Which will render a black swan:</p>
 <p><img alt="image-name" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqn40YbupkMAzY63jYtA6auEmjRfCOvCd0FA&amp;usqp=CAU" /></p>
 <p>If the image is local to the host replace the url with the path to the image; if you anticipate the path on the deployment server, then the image can be used as an html link.</p>
-<ul>
-<li>Inserting URL links</li>
-</ul>
+<h3 id="inserting-url-links">Inserting URL links</h3>
 <p>This is a variation of images, but without the <code>!</code>, such as</p>
 <pre><code>[link-name-that-will-display](url_to_link_destimation)
 </code></pre>
@@ -171,12 +167,21 @@ You can see working example at https://3.137.111.182/p4e/ (You will have to set 
 <pre><code>[link-to-images-of-black-swans](https://www.google.com/search?q=images+of+black+swan&amp;client=safari&amp;rls=en&amp;sxsrf=ALeKk03oIoQ387TWjJoKzX-D_b7o1to43Q:1613002985584&amp;tbm=isch&amp;source=iu&amp;ictx=1&amp;fir=L2P5MiS1ICLTxM%252CC6BDdJoXT9KcEM%252C_&amp;vet=1&amp;usg=AI4_-kTXrBMpj__xL5IkGCshrXTp04fX3w&amp;sa=X&amp;ved=2ahUKEwiCneivyODuAhVJBs0KHY88CaAQ9QF6BAgUEAE&amp;biw=1447&amp;bih=975#imgrc=i_lxoojURNE3XM)
 </code></pre>
 <p><a href="https://www.google.com/search?q=images+of+black+swan&amp;client=safari&amp;rls=en&amp;sxsrf=ALeKk03oIoQ387TWjJoKzX-D_b7o1to43Q:1613002985584&amp;tbm=isch&amp;source=iu&amp;ictx=1&amp;fir=L2P5MiS1ICLTxM%252CC6BDdJoXT9KcEM%252C_&amp;vet=1&amp;usg=AI4_-kTXrBMpj__xL5IkGCshrXTp04fX3w&amp;sa=X&amp;ved=2ahUKEwiCneivyODuAhVJBs0KHY88CaAQ9QF6BAgUEAE&amp;biw=1447&amp;bih=975#imgrc=i_lxoojURNE3XM">link-to-images-of-black-swans</a></p>
-<ul>
-<li>Typesetting mathematics</li>
-</ul>
-<p>In a markdown cell use dollar signs to delimit mathematics.  A leading and trailing pair (4 characters) centers the results.  In-line leading and trailing (2 characters) left justifies the result  For example, the latex gibberish F(x)=\int^{\tau}_{-\infty}{f(\tau)d\tau} when surrounded by "$" symbol renders:</p>
+<h3 id="typesetting-mathematics">Typesetting mathematics</h3>
+<p>In a markdown cell use dollar signs to delimit mathematics.  A leading and trailing pair (4 characters) centers the results.  In-line leading and trailing (2 characters) left justifies the result  For example, the latex gibberish </p>
+<p>F(x)=\int^{\tau}_{-\infty}{f(\tau)d\tau} </p>
+<p>when surrounded by single pair dollar symbol </p>
+<pre><code>$F(x)=\int^{\tau}_{-\infty}{f(\tau)d\tau}$
+</code></pre>
+<p>renders:</p>
 <p>
 <script type="math/tex">F(x)=\int^{\tau}_{-\infty}{f(\tau)d\tau}</script>
+</p>
+<p>To center use a double pair</p>
+<pre><code>$$F(x)=\int^{\tau}_{-\infty}{f(\tau)d\tau}$$
+</code></pre>
+<p>
+<script type="math/tex; mode=display">F(x)=\int^{\tau}_{-\infty}{f(\tau)d\tau}</script>
 </p></div>
         </div>
 
@@ -262,5 +267,5 @@ You can see working example at https://3.137.111.182/p4e/ (You will have to set 
 
 <!--
 MkDocs version : 1.0.4
-Build Date UTC : 2021-06-09 14:17:50
+Build Date UTC : 2021-06-09 14:24:52
 -->
