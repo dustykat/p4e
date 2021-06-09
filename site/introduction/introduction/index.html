@@ -87,7 +87,7 @@
             <li><a href="#python">Python</a></li>
             <li><a href="#programming-as-a-problem-solving-process">Programming as a problem solving process</a></li>
             <li><a href="#ccmr-approach">CCMR Approach</a></li>
-            <li><a href="#readings">Readings</a></li>
+            <li><a href="#readingsreferences">Readings/References</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
@@ -306,21 +306,15 @@ You will create and use Jupyter Notebooks that use the **ipython** kernel, the n
 </ol>
 <p>This protocol can be directly adapted to CT/DS problems as:</p>
 <ol>
-<li>Define the problem (problem statement)</li>
-<li>Gather information (identify known and unknown values, and governing equations)</li>
-<li>Generate and evaluate potential solutions</li>
-<li>Refine and implement a solution</li>
-<li>Verify and test the solution.</li>
-</ol>
-<p>For actual computational methods the protocol becomes:</p>
-<ol>
 <li>Explicitly state the problem</li>
 <li>Explicitly State: <em>Input</em> information, <em>Governing equations</em> or principles, and the required <em>Output</em> information.</li>
 <li>Work a sample problem by-hand for testing the general solution.</li>
 <li>Develop a general solution method (coding).</li>
 <li>Test the general solution against the by-hand example, then apply to the real problem.</li>
+<li>Refine the general solution so code is simple to read and maintain.</li>
 </ol>
 <p>Oddly enough the first step is the most important and sometimes the most difficult. In a practical problem, step 2 is sometimes difficult because a skilled programmer is needed to translate the governing principles into an algorithm for the general solution (step 4).</p>
+<p>The problem solving protocol above is a modification of the 5-step process in Etter, 1995 (see the References for the citation)</p>
 <h3 id="example-1-problem-solving-process">Example 1 Problem Solving Process</h3>
 <p>Consider a need to compute an arithmetic mean, what would the process look like?</p>
 <p><strong>Step 1.</strong> Develop script to compute the arithmetic mean of a stream of data of unknown length.</p>
@@ -384,7 +378,7 @@ You will create and use Jupyter Notebooks that use the **ipython** kernel, the n
 </tr>
 </tbody>
 </table>
-<p><strong>Step 5.</strong> This step we would code the algorithm expressed in the figure and test it with the by-hand data and other small datasets until we are convinced it works correctly.</p>
+<p><strong>Step 5.</strong> This step we can code the algorithm expressed in the figure and test it with the by-hand data and other small datasets until we are convinced it works correctly.</p>
 <p>In a simple JupyterLab script</p>
 <pre><code class="python"># Arithmetic Mean in Very Elementary and Primative Python
 xlist = [23.43,37.43,34.91,28.37,30.62] # list is a type of data structure
@@ -397,7 +391,7 @@ print(&quot;arithmetic mean = &quot;,(accumulator/howlong))
 
 <pre><code>arithmetic mean =  30.951999999999998
 </code></pre>
-<p><strong>Step 6.</strong> This step we would refine the code to generalize the algorithm.  In the example we want a way to supply the <code>xlist</code> from a file perhaps, and tidy the output by rounding to only two decimal places - rounding is relatively simple:</p>
+<p><strong>Step 6.</strong> This step we would refine the code to generalize the algorithm.  In the example we want a way to supply the <code>xlist</code> from a file perhaps, and tidy the output by rounding to only two decimal places - rounding is relatively simple so make that change first:</p>
 <pre><code class="python"># Arithmetic Mean in Very Elementary and Primative Python
 xlist = [23.43,37.43,34.91,28.37,30.62] # list is a type of data structure
 howlong = len(xlist) # len is a built-in function that returns how many items in a list
@@ -409,8 +403,9 @@ print(&quot;arithmetic mean = &quot;,round((accumulator/howlong),2))
 
 <pre><code>arithmetic mean =  30.95
 </code></pre>
-<p>Reading from a file, is a bit more complicated.  We need to create a connection to the file, then read the contents into our script, then put the contents into the <code>xlist</code></p>
+<p>Reading from a file, is a bit more complicated.  We need to create a connection to the file, then read the contents into our script, then put the contents into the <code>xlist</code>.  Here we just show how to in primative python, later in the book we have a deeper discussion of data files.  The data file must reside in the same directory as the notebook, or we have to supply the path to the file.</p>
 <p><strong>Download</strong> (right-click, save target as ...) the data file <code>data.txt</code> from: <a href="https://3.137.111.182/p4e/introduction/data.txt">https://3.137.111.182/p4e/introduction/data.txt</a></p>
+<p>Assuming the file is located in the same directory as the notebook, we modify our script to read the file anbd put values into our list</p>
 <pre><code class="python">xlist=[] # list (null) is a type of data structure
 externalfile = open(&quot;data.txt&quot;,'r') # create connection to file, set to read (r), file must exist
 how_many_lines = 0
@@ -428,7 +423,7 @@ print(&quot;arithmetic mean = &quot;,round((accumulator/howlong),2))
 
 <pre><code>arithmetic mean =  30.95
 </code></pre>
-<p>Finally, if we want to reuse the code a lot, it is convienent to make it into a function</p>
+<p>Finally, if we want to reuse the code a lot, it is convienent to make the arithmetic into a function</p>
 <pre><code class="python">def average(inputlist):
 # inputlist should be a list of values
     howlong = len(inputlist) # len is a built-in function that returns how many items in a list
@@ -439,7 +434,7 @@ print(&quot;arithmetic mean = &quot;,round((accumulator/howlong),2))
     return(result)
 </code></pre>
 
-<p>Put our file reading and compute mean code here</p>
+<p>We can replace the computation loop code (the part with <code>for i in range(howlong): ...</code>, and just evaluate our function in the print statement</p>
 <pre><code class="python">xlist=[] # list (null) is a type of data structure
 externalfile = open(&quot;data.txt&quot;,'r') # create connection to file, set to read (r), file must exist
 how_many_lines = 0
@@ -452,7 +447,63 @@ print(&quot;arithmetic mean = &quot;,round(average(xlist),2))
 
 <pre><code>arithmetic mean =  30.95
 </code></pre>
-<p>So the simple task of computing the mean of a collection of values, is a bit more complex when decomposed that it first appears, but illustrates a five step process (with a refinement step).  Throughout the course this process is always in the background.</p>
+<p>We can also put the file reading into a function, as</p>
+<pre><code class="python">def readAfile(filename,inputlist): # arguments are WhatToRead,WhereToPut 
+    externalfile = open(filename,'r') # create connection to file, set to read (r), file must exist
+    how_many_lines = 0
+    for line in externalfile: # parse each line, append to xlist
+        inputlist.append(line)
+        how_many_lines += 1
+    externalfile.close() # close the file connection
+    return()
+</code></pre>
+
+<p>Now replacing the file reading fragment with the function, the "code" is quite compact and realitavely readable</p>
+<pre><code class="python">xlist=[] # list (null) is a type of data structure
+readAfile(&quot;data.txt&quot;,xlist) # read the file , put into the list
+print(&quot;arithmetic mean = &quot;,round(average(xlist),2)) # compute and print the mean
+</code></pre>
+
+<pre><code>arithmetic mean =  30.95
+</code></pre>
+<p>The entire script can be saved to an external file and run as needed. For example a file named <code>listMean.py</code> contains the two functions and our code and looks like</p>
+<p><strong>Download</strong> (right-click, save target as ...) the python file <code>listMean.py</code> from: <a href="https://3.137.111.182/p4e/introduction/listMean.py">https://3.137.111.182/p4e/introduction/listMean.py</a></p>
+<pre><code class="python">! cat listMean.py # print the contents of the file
+</code></pre>
+
+<pre><code># program to read a numeric file, and compute mean of the contents
+# Prototype functions:
+
+def readAfile(filename,inputlist): # arguments are WhatToRead,WhereToPut 
+    externalfile = open(filename,'r') # create connection to file, set to read (r), file must exist
+    how_many_lines = 0
+    for line in externalfile: # parse each line, append to xlist
+        inputlist.append(line)
+        how_many_lines += 1
+    externalfile.close() # close the file connection
+    return()
+
+def average(inputlist):
+# inputlist should be a list of values
+    howlong = len(inputlist) # len is a built-in function that returns how many items in a list
+    accumulator = 0 # a variable to accumulate the sum
+    for i in range(howlong):
+        accumulator = accumulator + float(inputlist[i])
+    result = (accumulator/howlong)
+    return(result)
+
+xlist=[] # list (null) is a type of data structure
+readAfile("data.txt",xlist) # read the file , put into the list
+print("arithmetic mean = ",round(average(xlist),2)) # compute and print the mean
+</code></pre>
+<pre><code class="python"># run the program:
+! python listMean.py
+</code></pre>
+
+<pre><code>arithmetic mean =  30.95
+</code></pre>
+<p>So the simple task of computing the mean of a collection of values, looks a bit more complex when decomposed that it first appears, but illustrates the six step process.  Throughout the book this entire problem solving process is in the background.  The important CT principle is problem decomposition, into parts that are simple to manage, the integration into the solution tool.  </p>
+<p>If your particular problem is a one-off (once ever); then the refinements might be ommitted, but if you intend to reuse the solution a lot the refinements are vital to long term use and maintenance.</p>
 <h2 id="ccmr-approach">CCMR Approach</h2>
 <p>A lot of the problems we will encounter from a CT/DS perspective have already been solved, or at least analogs have been solved.  It is perfectly acceptable to use prior work for a new set of conditions as long as proper attribution is made.  We call this process CCMR:</p>
 <ol>
@@ -461,14 +512,15 @@ print(&quot;arithmetic mean = &quot;,round(average(xlist),2))
 <li><strong>Modify:</strong> Modify the original cited work for your specific needs.  Note the changes in the code using comment statements.</li>
 <li><strong>Run:</strong> Apply the modified code to the problem of interest. </li>
 </ol>
-<p>In cases where we use CCMR we are not so much programming and developing our own work as scaffolding parts <a href="https://en.wikipedia.org/wiki/Scaffold_(programming)">https://en.wikipedia.org/wiki/Scaffold_(programming)</a> - a legitimate and valuable engineering activity.</p>
-<h2 id="readings">Readings</h2>
+<p>Whether Copy or Cite is first, is a personal preference but try to avoid copy without at least recording the source URL in the code or notebook.  In using CCMR we are not so much programming and developing our own work as scaffolding parts <a href="https://en.wikipedia.org/wiki/Scaffold_(programming)">https://en.wikipedia.org/wiki/Scaffold_(programming)</a> - a legitimate and valuable engineering activity, this is exactly the system integration process described earlier.</p>
+<h2 id="readingsreferences">Readings/References</h2>
 <ul>
-<li>Computational and Inferential Thinking Ani Adhikari and John DeNero, Computational and Inferential Thinking, The Foundations of Data Science, Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND) Chapter 1 https://www.inferentialthinking.com/chapters/01/what-is-data-science.html</li>
+<li>Computational and Inferential Thinking Ani Adhikari and John DeNero, Computational and Inferential Thinking, The Foundations of Data Science, Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND) Chapter 1 <a href="https://www.inferentialthinking.com/chapters/01/what-is-data-science.html">https://www.inferentialthinking.com/chapters/01/what-is-data-science.html</a></li>
 <li>Learn Python the Hard Way (Online Book) <a href="https://learnpythonthehardway.org/book/">https://learnpythonthehardway.org/book/</a>  Recommended for beginners who want a complete course in programming with Python.</li>
 <li>LearnPython.org (Interactive Tutorial) <a href="https://www.learnpython.org/">https://www.learnpython.org/</a>  Short, interactive tutorial for those who just need a quick way to pick up Python syntax.</li>
 <li>How to Think Like a Computer Scientist (Interactive Book) <a href="https://runestone.academy/runestone/books/published/thinkcspy/index.html">https://runestone.academy/runestone/books/published/thinkcspy/index.html</a> Interactive "CS 101" course taught in Python that really focuses on the art of problem solving. </li>
 <li>How to Learn Python for Data Science, The Self-Starter Way <a href="https://elitedatascience.com/learn-python-for-data-science">https://elitedatascience.com/learn-python-for-data-science</a> </li>
+<li>Etter, D. M., 1995. <em>Fortran 90 for Engineers</em> J. Wiley and Sons, New York. 292 p. ISBN 13:978-0-471-36426-9</li>
 </ul></div>
         </div>
 
