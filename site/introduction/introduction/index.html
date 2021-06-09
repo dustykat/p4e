@@ -45,9 +45,6 @@
                             <li >
                                 <a href="../..">Home</a>
                             </li>
-                            <li >
-                                <a href="../../about/">About</a>
-                            </li>
                             <li class="dropdown active">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Chapters <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
@@ -66,7 +63,7 @@
                             </a>
                         </li>
                             <li >
-                                <a rel="next" href="../../about/">
+                                <a rel="next" href="../..">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
@@ -83,7 +80,7 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#computational-thinking-and-data-science">Computational Thinking and Data Science</a></li>
+        <li class="main active"><a href="#introduction">Introduction</a></li>
             <li><a href="#computational-thinking-concepts">Computational Thinking Concepts</a></li>
             <li><a href="#data-science-and-practice">Data Science and Practice</a></li>
             <li><a href="#jupyterlab-ipython-environment">JupyterLab (iPython) Environment</a></li>
@@ -95,10 +92,11 @@
 </div></div>
                 <div class="col-md-9" role="main">
 
-<p><strong>Download</strong> (right-click, save target as ...) this page as a jupyterlab notebook from: <a href="https://3.137.111.182/p4e/introduction/introduction.ipynb">https://3.137.111.182/p4e/introduction/introduction.ipynb</a></p>
-<h1 id="computational-thinking-and-data-science">Computational Thinking and Data Science</h1>
+<h1 id="introduction">Introduction</h1>
+<p>Most pages will start with the copyright notice, followed by a link to the source notebook, and any required data files. Notice the <strong>Download</strong> link suggests how to download, it is browser dependent; if you click on the link and your browser renders file contents, then you have to use the right-click/save as ... structure.  If your browser starts downloading, then great!</p>
 <p>Copyright © 2021 Theodore G. Cleveland, Farhang Forghanparast, Dinesh Sundaravadivelu Devarajan, Turgut Batuhan Baturalp (Batu), Tanja Karp, Long Nguyen, and Mona Rizvi. <em>The contents of this book are licensed for free consumption under the following license:</em> <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)</a>.</p>
-<p>Introduction to Computational Thinking and Data Science: </p>
+<p><strong>Download</strong> (right-click, save target as ...) this page as a jupyterlab notebook from: <a href="https://3.137.111.182/p4e/introduction/introduction.ipynb">https://3.137.111.182/p4e/introduction/introduction.ipynb</a></p>
+<p>Topics: </p>
 <ul>
 <li>Computational thinking concepts </li>
 <li>Data science and practices </li>
@@ -217,7 +215,7 @@ Identifies what is to be done, and the order in which they should be done.</p>
 </ul>
 </li>
 <li>Business Skills<ul>
-<li><strong>Communication</strong></li>
+<li>Communication</li>
 <li>Creativity and Innovation</li>
 <li>Operations and Strategy</li>
 <li>Business Analytics</li>
@@ -226,11 +224,11 @@ Identifies what is to be done, and the order in which they should be done.</p>
 <li>Supplementary Skills<ul>
 <li>Natural Language Processing</li>
 <li>Recommendation Systems</li>
-<li><strong>Time Series Analysis</strong></li>
+<li>Time Series Analysis</li>
 </ul>
 </li>
 <li>Practice<ul>
-<li><strong>Projects</strong></li>
+<li>Projects</li>
 <li>Competitions</li>
 <li>Problem Solving Challenges</li>
 </ul>
@@ -242,9 +240,11 @@ Identifies what is to be done, and the order in which they should be done.</p>
 <p><strong>Jupyter Notebook</strong> is an open-source web application that allows you to create and share documents that contain live code, equations, visualizations and narrative text. Uses include: data organizing and transformation, numerical simulation, statistical modeling, visualization, machine learning, and other similar types of uses. </p>
 <p><strong>JupyterHub</strong> (https://github.com/jupyterhub/jupyterhub) is a multi-user Hub that spawns, manages, and proxies multiple instances of the single-user Jupyter notebook server.</p>
 <p>All these tools allow use of various coding languages; Python is the choice for ENGR 1330.  Installing JupyterLab on your own computer is relatively straightforward if it is an Intel-based Linux, Macintosh, or Windows machine - simply use Anaconda (https://www.anaconda.com/) as the installer.</p>
-<p>Installing onto an ARM-based machine is more difficult, but possible (this notebook was created on a Raspberry Pi). With both Apple and Microsoft abandoning Intel you can expect Anaconda builds for aarch64 (ARM) in the future.  </p>
-<h3 id="this-course">This course:</h3>
-<p>You will create and use Jupyter Notebooks that use the <strong>ipython</strong> kernel, the notebook files will look like <code>filename.ipynb</code>; these are ASCII files that the JupyterLab interprets and runs.</p>
+<p>Installing onto an ARM-based machine is more difficult, but possible (this notebook was created on a Raspberry Pi). </p>
+<!--### This course:
+
+You will create and use Jupyter Notebooks that use the **ipython** kernel, the notebook files will look like `filename.ipynb`; these are ASCII files that the JupyterLab interprets and runs.-->
+
 <h2 id="python">Python</h2>
 <p>The programming language we will use is Python (actually iPython). Python is an example of a high-level language; other high-level languages include C, C++, PHP, FORTRAN, ADA, Pascal, Go, Java, etc (there are a lot).</p>
 <p>As you might infer from the name high-level language, there are also low-level languages, sometimes referred to as machine languages or assembly languages. Machine language is the encoding of instructions in binary so that they can be directly executed by the computer. Assembly language uses a slightly easier format to refer to the low level instructions. Loosely speaking, computers can only execute programs written in low-level languages. To be exact, computers can actually only execute programs written in machine language. Thus, programs written in a high-level language (and even those in assembly language) have to be processed before they can run. This extra processing takes some time, which is a small disadvantage of high-level languages. However, the advantages to high-level languages are enormous.</p>
@@ -269,12 +269,12 @@ Identifies what is to be done, and the order in which they should be done.</p>
 </tbody>
 </table>
 <p>A compiler reads the program and translates it completely before the program starts running. In this case, the high-level program is called the source code, and the translated program is called the object code or the executable. Once a program is compiled, you can execute it repeatedly without further translation.</p>
-<p><img alt="https://3.137.111.182/engr-1330-webbook/p4e/introduction/compiler.png" src="https://3.137.111.182/engr-1330-webbookp4e/introduction/compiler.png" /></p>
+<p><img alt="https://3.137.111.182/p4e/introduction/compiler.png" src="https://3.137.111.182/p4e/introduction/compiler.png" /></p>
 <table>
 <thead>
 <tr>
 <th></th>
-<th>Compiled Prorgam. Image from: (https://runestone.academy/runestone/books/published/thinkcspy/GeneralIntro/ThePythonProgrammingLanguage.html)</th>
+<th>Compiled Program. Image from: (https://runestone.academy/runestone/books/published/thinkcspy/GeneralIntro/ThePythonProgrammingLanguage.html)</th>
 <th></th>
 </tr>
 </thead>
@@ -333,24 +333,30 @@ Identifies what is to be done, and the order in which they should be done.</p>
 <table>
 <thead>
 <tr>
-<th align="right">Data</th>
+<th align="left">Item</th>
+<th align="left">Data</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="right">23.43</td>
+<td align="left">1</td>
+<td align="left">23.43</td>
 </tr>
 <tr>
-<td align="right">37.43</td>
+<td align="left">2</td>
+<td align="left">37.43</td>
 </tr>
 <tr>
-<td align="right">34.91</td>
+<td align="left">3</td>
+<td align="left">34.91</td>
 </tr>
 <tr>
-<td align="right">28.37</td>
+<td align="left">4</td>
+<td align="left">28.37</td>
 </tr>
 <tr>
-<td align="right">30.62</td>
+<td align="left">5</td>
+<td align="left">30.62</td>
 </tr>
 </tbody>
 </table>

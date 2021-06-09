@@ -1,10 +1,11 @@
-**Download** (right-click, save target as ...) this page as a jupyterlab notebook from: [https://3.137.111.182/p4e/introduction/introduction.ipynb](https://3.137.111.182/p4e/introduction/introduction.ipynb)
+# Introduction
+Most pages will start with the copyright notice, followed by a link to the source notebook, and any required data files. Notice the **Download** link suggests how to download, it is browser dependent; if you click on the link and your browser renders file contents, then you have to use the right-click/save as ... structure.  If your browser starts downloading, then great!
 
-
-# Computational Thinking and Data Science 
 Copyright © 2021 Theodore G. Cleveland, Farhang Forghanparast, Dinesh Sundaravadivelu Devarajan, Turgut Batuhan Baturalp (Batu), Tanja Karp, Long Nguyen, and Mona Rizvi. *The contents of this book are licensed for free consumption under the following license:* [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)](https://creativecommons.org/licenses/by-nc-nd/4.0/).
 
-Introduction to Computational Thinking and Data Science: 
+**Download** (right-click, save target as ...) this page as a jupyterlab notebook from: [https://3.137.111.182/p4e/introduction/introduction.ipynb](https://3.137.111.182/p4e/introduction/introduction.ipynb)
+
+Topics: 
 
 - Computational thinking concepts 
 - Data science and practices 
@@ -115,16 +116,16 @@ A list of typical skills from [https://elitedatascience.com/data-science-resourc
     - **Data Visualization**
     - **Applied Machine Learning**
 - Business Skills
-    - **Communication**
+    - Communication
     - Creativity and Innovation
     - Operations and Strategy
     - Business Analytics
 - Supplementary Skills
     - Natural Language Processing
     - Recommendation Systems
-    - **Time Series Analysis**
+    - Time Series Analysis
 - Practice
-    - **Projects**
+    - Projects
     - Competitions
     - Problem Solving Challenges
 
@@ -141,11 +142,11 @@ A list of typical skills from [https://elitedatascience.com/data-science-resourc
 
 All these tools allow use of various coding languages; Python is the choice for ENGR 1330.  Installing JupyterLab on your own computer is relatively straightforward if it is an Intel-based Linux, Macintosh, or Windows machine - simply use Anaconda (https://www.anaconda.com/) as the installer.
 
-Installing onto an ARM-based machine is more difficult, but possible (this notebook was created on a Raspberry Pi). With both Apple and Microsoft abandoning Intel you can expect Anaconda builds for aarch64 (ARM) in the future.  
+Installing onto an ARM-based machine is more difficult, but possible (this notebook was created on a Raspberry Pi). 
 
-### This course:
+<!--### This course:
 
-You will create and use Jupyter Notebooks that use the **ipython** kernel, the notebook files will look like `filename.ipynb`; these are ASCII files that the JupyterLab interprets and runs.
+You will create and use Jupyter Notebooks that use the **ipython** kernel, the notebook files will look like `filename.ipynb`; these are ASCII files that the JupyterLab interprets and runs.-->
 
 ## Python
 
@@ -166,9 +167,9 @@ Two kinds of programs process high-level languages into low-level languages: int
 
 A compiler reads the program and translates it completely before the program starts running. In this case, the high-level program is called the source code, and the translated program is called the object code or the executable. Once a program is compiled, you can execute it repeatedly without further translation.
 
-![https://3.137.111.182/engr-1330-webbook/p4e/introduction/compiler.png](https://3.137.111.182/engr-1330-webbookp4e/introduction/compiler.png)
+![https://3.137.111.182/p4e/introduction/compiler.png](https://3.137.111.182/p4e/introduction/compiler.png)
 
-||Compiled Prorgam. Image from: (https://runestone.academy/runestone/books/published/thinkcspy/GeneralIntro/ThePythonProgrammingLanguage.html)||
+||Compiled Program. Image from: (https://runestone.academy/runestone/books/published/thinkcspy/GeneralIntro/ThePythonProgrammingLanguage.html)||
 |---|------------|---|
 
 Many modern languages use both processes. They are first compiled into a lower level language, called byte code, and then interpreted by a program called a virtual machine. Python uses both processes, but because of the way programmers interact with it, it is usually considered an interpreted language.
@@ -186,10 +187,6 @@ The second type of syntax rule pertains to the structure of a statement— that 
 When you read a sentence in English or a statement in a formal language, you have to figure out what the structure of the sentence is; This process is called **parsing**.
 
 For example, when you hear the sentence, “The other shoe fell”, you understand that the other shoe is the subject and fell is the verb. Once you have parsed a sentence, you can figure out what it means, or the semantics of the sentence. Assuming that you know what a shoe is and what it means to fall, you will understand the general implication of this sentence.
-
-
-
-
 
 ## Programming as a problem solving process
 The entire point of this book is to develop problem solving skills and begin using some tools (Statistics, Numerical Methods, Data Science, implemented as JupyterLab/Python programs).
@@ -233,13 +230,13 @@ Consider a need to compute an arithmetic mean, what would the process look like?
 
 **Step 3.** Work a sample problem by-hand for testing the general solution.
 
-|Data|
-|---:|
-|23.43|
-|37.43|
-|34.91|
-|28.37|
-|30.62|
+|Item|Data|
+|:---|:---|
+|1|23.43|
+|2|37.43|
+|3|34.91|
+|4|28.37|
+|5|30.62|
 
 The arithmetic mean requires us to count how many elements are in the data stream (in this case there are 5) and compute their sum (in this case 154.76), and finally divide the sum by the count and report this result as the arithmetic mean.
 
