@@ -1,4 +1,4 @@
-# <p style="text-align:center">Python (and Data Science) for Engineers: <br> A WebBook to Accompany "Computational Thinking and Data Science" ENGR-1330 at Texas Tech University </p>
+# <p style="text-align:center">Python (and Data Science) for Engineers: <br> A WebBook to Accompany <br> "ENGR-1330 Computational Thinking and Data Science" <br> at Texas Tech University </p>
 
 <p style="text-align:center">by <br><br>Theodore G. Cleveland and Farhang Forghanparast<br></p>
 
