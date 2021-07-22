@@ -7,7 +7,20 @@ Last GitHub Commit Date: 13 July 2021
 - computational thinking concepts
 - jupyterlab/computing environment
 
+Download this page as a jupyter notebook from [http://54.243.252.9/p4e/1-programming/0-introduction/introduction.ipynb](http://54.243.252.9/p4e/1-programming/1-introduction/introduction.ipynb)
+
+The graphics files are at same location
+
+[http://54.243.252.9/p4e/1-programming/0-introduction/algorithm.png](http://54.243.252.9/p4e/1-programming/1-introduction/algorithm.png)
+
+[http://54.243.252.9/p4e/1-programming/0-introduction/compiler.png](http://54.243.252.9/p4e/1-programming/1-introduction/compiler.png)
+
+[http://54.243.252.9/p4e/1-programming/0-introduction/interpreter.png](http://54.243.252.9/p4e/1-programming/1-introduction/interpreter.png)
+
+**Note should probably imbed graphics using absolute path on destination server. Web links will generate XSS warnings on host servers.**
+
 ---
+
 
 
 ## Computational Thinking Concepts
