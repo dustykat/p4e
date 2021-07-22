@@ -72,7 +72,7 @@ Consider a need to compute an arithmetic mean, what would the process look like?
 **Step 3.** Work a sample problem by-hand for testing the general solution.
 
 |Data|
-|---:|
+|:---|
 |23.43|
 |37.43|
 |34.91|
