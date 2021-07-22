@@ -1,4 +1,10 @@
-# Expressions
+# expressions
+
+- fundamental operators
+- arithmetic expressions
+- simple output: print()
+
+Download this page as a jupyter notebook from [http://54.243.252.9/p4e/1-programming/2-expressions/expressions.ipynb](http://54.243.252.9/p4e/1-programming/2-expressions/expressions.ipynb)
 
 Consider the relativistic equation relating energy, mass, and the speed of light 
 
@@ -13,6 +19,8 @@ The part of the statement to the right of the $=$ symbol is an arithmetic expres
 When we attempt to write and execute python scripts - we will make various mistakes; these will generate warnings and errors, which we will repair to make a working program.
 
 Consider our statement with the container names spelled out:
+
+
 
 
 ```python
