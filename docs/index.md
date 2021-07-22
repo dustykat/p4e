@@ -6,6 +6,7 @@
 
 <p style="text-align:center">with contributions from :<br> Dinesh Sundaravadivelu Devarajan, Turgut Batuhan Baturalp (Batu), Tanja Karp, Long Nguyen, and  Mona Rizvi </p>
 
+<p><a href="http:54.243.252.9/"> Server Host Page </a></p>
 
 ## Introduction
  
