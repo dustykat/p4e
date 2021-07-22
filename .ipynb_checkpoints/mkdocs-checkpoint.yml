@@ -1,10 +1,37 @@
-site_name: P4E 
-# navigation
+site_name: P4E
+# navigation/site structure 
 nav:
   - Home: index.md
 #  - About: about.md
-  - Chapters:
-     - Introduction: ./introduction/introduction.md
+  - Programming:
+     - Expressions: 1-programming/2-expressions/expressions.md
+     - Data Types: 1-programming/3-datatypes/datatypes.md
+     - Variables: 1-programming/4-variables/variables.md
+     - Data Structures (mutable): 1-programming/5-mutabledatastructures/mutabledatastructures.md
+     - Data Structures (immutable): 1-programming/6-immutabledatastructures/immutabledatastructures.md
+     - User Interaction: 1-programming/7-userinteraction/userinteraction.md
+     - Algorithm Building Blocks : 1-programming/8-algorithmbuildingblocks/algorithmbuildingblocks.md
+     - Sequential Structures : 1-programming/9-sequentialstructures/sequentialstructures.md
+     - Selection Structures : 1-programming/10-selectionstructures/selectionstructures.md
+     - Count Controlled Repetition : 1-programming/11-repetitionstructures/ccrepetitionstructures.md
+     - Sentinel Controlled Repetition : 1-programming/11-repetitionstructures/screpetitionstructures.md
+     - Functions : 1-programming/13-functions/functions.md
+     - External Modules : 1-programming/14-externalmodules/externalmodules.md
+     - Working With Files : 1-programming/15-workingwithfiles/workingwithfiles.md
+     - More File Manipulation : 1-programming/16-morefilemanipulation/morefilemanipulation.md
+     - Working with ARRAY : 1-programming/17-workingwitharray/workingwitharray.md
+     - Array processing with NUMPY : 1-programming/18-arrayprocessingwithnumpy/arrayprocessingwithnumpy.md
+     - Database Concepts : 1-programming/19-databaseconcepts/databaseconcepts.md
+     - Database processing with PANDAS : 1-programming/20-databaseprocessingwithpandas/databaseprocessingwithpandas.md
+     - Visual Display of Data : 1-programming/21-visualdisplayofdata/visualdisplayofdata.md
+     - Plotting with MATPLOTLAB : 1-programming/22-plottingwithmatplotlab/plottingwithmatplotlab.md
+  - Data Modeling: 
+     - Data Models and Visualization : 2-datamodeling/23-datamodelsandvisualization/datamodelsandvisualization.md
+      #- Data Models -- Machine Learning Methods :      
+     
+  - Additional Readings: readings.md
+     
+# nesting as pulldown??
 
 # active theme (mkdocs/readthedocs are free, they work differently wrt code blocks)
 theme:

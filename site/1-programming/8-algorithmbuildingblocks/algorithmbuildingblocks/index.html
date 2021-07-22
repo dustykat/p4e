@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>Algorithm Building Blocks - P4E</title>
+        <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../../..">P4E</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="../../..">Home</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Programming <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../2-expressions/expressions/">Expressions</a>
+</li>
+                                    
+<li >
+    <a href="../../3-datatypes/datatypes/">Data Types</a>
+</li>
+                                    
+<li >
+    <a href="../../4-variables/variables/">Variables</a>
+</li>
+                                    
+<li >
+    <a href="../../5-mutabledatastructures/mutabledatastructures/">Data Structures (mutable)</a>
+</li>
+                                    
+<li >
+    <a href="../../6-immutabledatastructures/immutabledatastructures/">Data Structures (immutable)</a>
+</li>
+                                    
+<li >
+    <a href="../../7-userinteraction/userinteraction/">User Interaction</a>
+</li>
+                                    
+<li class="active">
+    <a href="./">Algorithm Building Blocks</a>
+</li>
+                                    
+<li >
+    <a href="../../9-sequentialstructures/sequentialstructures/">Sequential Structures</a>
+</li>
+                                    
+<li >
+    <a href="../../10-selectionstructures/selectionstructures/">Selection Structures</a>
+</li>
+                                    
+<li >
+    <a href="../../11-repetitionstructures/ccrepetitionstructures/">Count Controlled Repetition</a>
+</li>
+                                    
+<li >
+    <a href="../../11-repetitionstructures/screpetitionstructures/">Sentinel Controlled Repetition</a>
+</li>
+                                    
+<li >
+    <a href="../../13-functions/functions/">Functions</a>
+</li>
+                                    
+<li >
+    <a href="../../14-externalmodules/externalmodules/">External Modules</a>
+</li>
+                                    
+<li >
+    <a href="../../15-workingwithfiles/workingwithfiles/">Working With Files</a>
+</li>
+                                    
+<li >
+    <a href="../../16-morefilemanipulation/morefilemanipulation/">More File Manipulation</a>
+</li>
+                                    
+<li >
+    <a href="../../17-workingwitharray/workingwitharray/">Working with ARRAY</a>
+</li>
+                                    
+<li >
+    <a href="../../18-arrayprocessingwithnumpy/arrayprocessingwithnumpy/">Array processing with NUMPY</a>
+</li>
+                                    
+<li >
+    <a href="../../19-databaseconcepts/databaseconcepts/">Database Concepts</a>
+</li>
+                                    
+<li >
+    <a href="../../20-databaseprocessingwithpandas/databaseprocessingwithpandas/">Database processing with PANDAS</a>
+</li>
+                                    
+<li >
+    <a href="../../21-visualdisplayofdata/visualdisplayofdata/">Visual Display of Data</a>
+</li>
+                                    
+<li >
+    <a href="../../22-plottingwithmatplotlab/plottingwithmatplotlab/">Plotting with MATPLOTLAB</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Data Modeling <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../2-datamodeling/23-datamodelsandvisualization/datamodelsandvisualization/">Data Models and Visualization</a>
+</li>
+                                </ul>
+                            </li>
+                            <li >
+                                <a href="../../../readings.md">Additional Readings</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="../../7-userinteraction/userinteraction/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../../9-sequentialstructures/sequentialstructures/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#algorithm-building-blocks">Algorithm Building Blocks</a></li>
+            <li><a href="#sequential-structure">Sequential Structure</a></li>
+            <li><a href="#selection-structures">Selection Structures</a></li>
+            <li><a href="#repetition-loop-structures">Repetition (Loop) Structures</a></li>
+            <li><a href="#flowcharts">Flowcharts</a></li>
+            <li><a href="#psuedocode">Psuedocode</a></li>
+            <li><a href="#readings">Readings</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="algorithm-building-blocks">Algorithm Building Blocks</h1>
+<p>All programs are made up of three fundamental patterns of control or flow:</p>
+<ol>
+<li>Sequence - one instruction after another</li>
+<li>Selection (Conditional) - A group of instructions may or may not be executed, depending on some condition</li>
+<li>Repetition (Loop) – A group of instructions repeated multiple times</li>
+</ol>
+<hr />
+<h2 id="sequential-structure">Sequential Structure</h2>
+<p>All programs are made up of combinations of these patterns (plus one more we’ll discuss later).<br />
+The simplest pattern, sequence, means that one computer instruction, or “line of code” is executed after another, in sequence.  It is the default pattern.</p>
+<pre><code class="python">%reset -f
+</code></pre>
+
+<pre><code class="python">x = 5
+y = 10
+x = x + y
+print(x)
+</code></pre>
+
+<pre><code>15
+</code></pre>
+<p>In a Jupyter notebook, the instructions in a cell are executed, following the pattern(s) in the code in that cell.<br />
+The code in cells form a continuous program, but the order depends on the order of the cells the user chooses to execute.</p>
+<pre><code class="python">x = 5
+y = 10
+x = x + y
+</code></pre>
+
+<pre><code class="python">x = x*2
+</code></pre>
+
+<pre><code class="python">x + 4
+</code></pre>
+
+<pre><code>34
+</code></pre>
+<h2 id="selection-structures">Selection Structures</h2>
+<p>Selection is a pattern where the flow of execution branches one way or another, depending on a condition.  The Python statements related to selection are <code>if</code> statements.</p>
+<p><strong><code>if</code> statement</strong></p>
+<p>In the simple if statement, the body of the if statement (the indented instructions following the colon at the end of the if) is only executed if the condition evaluates to True.  The statements following the if statement body that are indented at the same level as the if are always executed regardless of the value of the condition.</p>
+<pre><code class="python">y = 2
+x = int(input('Enter value for x (numeric)'))
+if x &lt; 10:
+    y = 20
+y = y * 2
+print(y)
+</code></pre>
+
+<pre><code>Enter value for x (numeric) 9
+
+
+40
+</code></pre>
+<p><strong><code>if-else</code> statement</strong></p>
+<p>When there are 2 possibilities, an if-else is used.  The else clause (the statements indented after the else statement) are executed if the condition specified with the if is False.  The else is never followed by a condition, just a colon.  In the example above, the body of the if (y = 20) is executed if x &lt; 10, and the body of the else (y = 2) is executed if x is not less than 10 (x &gt;= 10).</p>
+<pre><code class="python">x = int(input('Enter value for x (numeric)'))
+if x &lt; 10:
+    y = 20
+else:
+    y = 2
+y = y * 2
+print(y)
+</code></pre>
+
+<pre><code>Enter value for x (numeric) 9
+
+
+40
+</code></pre>
+<p><strong><code>if-elif-else</code> statement</strong></p>
+<p>When there are multiple possibilities, the the <code>if-elif-else</code> statement is used.  An <code>if</code> statement may have just one <code>if</code> and one <code>else</code> clause, but it may have multiple <code>elif</code> (else if) clauses.  In the example, the <code>else</code> is executed only if x is greater than 10, because the cases of x less than 10 and x equal to 10 are already covered.  Notice that the <code>==</code> operator is used to test for equality, because <code>=</code> is used for assignment.  Each <code>elif</code> clause must have its own condition, followed by a colon.</p>
+<pre><code class="python">x = int(input('Enter value for x (numeric)'))
+if x &lt; 10:
+    y = 20
+elif x == 10:
+    y = 4
+else:
+    y = 2
+y = y * 2
+print(y)
+</code></pre>
+
+<pre><code>Enter value for x (numeric) 9
+
+
+40
+</code></pre>
+<hr />
+<h2 id="repetition-loop-structures">Repetition (Loop) Structures</h2>
+<p>Obviously, a powerful part of programming is that you can write a single piece of code, and execute it as many times as needed, from once to millions of times.
+Python has two types of loop structures, the <code>for</code> loop and the <code>while</code> loop.</p>
+<p><strong><code>for</code> loop</strong></p>
+<p>The <code>for</code> loop iterates (loops) over a set of values, and it is used along with the <code>in</code> keyword.
+The simplest version iterates over a set of integers created using the <code>range()</code> function.</p>
+<pre><code class="python">for index in range(3):
+        print( index )
+</code></pre>
+
+<pre><code>0
+1
+2
+</code></pre>
+<p>In this case, <code>range()</code> produces the set of integers from 0 to 2, inclusive. Notice how the last value 3 is not returned by range().  This behavior is python specific, and range() returns values up to, but not including the stopping value - another way to interpret is start at 0 and produce 3 values, including the zero - the syntax below is more reflective of such thinking:</p>
+<pre><code class="python">for index in range(0,3):
+        print( index )
+</code></pre>
+
+<pre><code>0
+1
+2
+</code></pre>
+<p><strong><code>while</code> loop</strong></p>
+<p>The while loop iterates (loops) while some condition remains True.
+The condition is specified by a Boolean expression (True/False)</p>
+<pre><code class="python">x = 0
+y = 10
+print(x,y)
+while x &lt; y:
+    x += 2
+    y -= 2
+print(x,y)
+</code></pre>
+
+<pre><code>0 10
+6 4
+</code></pre>
+<p>The statements in the loop body are executed while the condition x &lt; y remains True.</p>
+<p>As with the for loop, the while loop statement ends in a colon, and the loop body is indented (and ends when the indentation level returns to the same level as the while.</p>
+<p>A Boolean expression is any expression that evaluates to True or False.  Expression that include the relational operators or the logical operators are Boolean expressions.  Also, the integer value 0 is False and a non-zero value is True, and there are other special cases, for example, the empty string “” is False.</p>
+<p>With while loops, the usefulness of the := (assignment that also evaluates) becomes clear.</p>
+<pre><code class="python">while (str := input(&quot;Please enter a string or 'quit' to stop: &quot;)) != 'quit':
+    print( &quot;Your string's length is &quot; )
+    print( len(str) )
+</code></pre>
+
+<pre><code>Please enter a string or 'quit' to stop:  what is my name
+
+
+Your string's length is 
+15
+
+
+Please enter a string or 'quit' to stop:  quit
+</code></pre>
+<p>versus</p>
+<pre><code class="python">str = input(&quot;Please enter a string or 'quit' to stop: &quot;)
+while str != 'quit':
+    print( &quot;Your string's length is &quot; )
+    print( len(str) )
+    str = input(&quot;Please enter a value or 'quit' to stop: &quot;)
+</code></pre>
+
+<pre><code>Please enter a string or 'quit' to stop:  what is my name
+
+
+Your string's length is 
+15
+
+
+Please enter a value or 'quit' to stop:  quit
+</code></pre>
+<p>A for loop can be considered a special case of a while loop, in the sense that a for loop continues while the end of the sequence of values has not been reached.</p>
+<h2 id="flowcharts">Flowcharts</h2>
+<h3 id="what-is-a-flowchart">What is a Flowchart?</h3>
+<p>A flowchart is a type of diagram that represents a workflow or process. A flowchart can also be defined as a diagrammatic representation of an algorithm, a step-by-step approach to solving a task.</p>
+<p><img alt="" src="../flowchart.png" /></p>
+<table>
+<thead>
+<tr>
+<th align="left">Figure 2</th>
+<th align="left">Repair Flowchart for a Lamp</th>
+<th align="left">https://en.wikipedia.org/wiki/Flowchart</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>The flowchart shows the steps as boxes of various kinds, and their order by connecting the boxes with arrows. This diagrammatic representation illustrates a solution model to a given problem. Flowcharts are used in analyzing, designing, documenting or managing a process or program in various fields.</p>
+<p>There is a symbol convention (a language) as depicted in Figure 2 below (from: https://en.wikipedia.org/wiki/Flowchart)</p>
+<p><img alt="" src="../flowchartsymbols.png" /></p>
+<table>
+<thead>
+<tr>
+<th align="left">Figure 1</th>
+<th align="left">Flowchart Symbols</th>
+<th align="left">https://en.wikipedia.org/wiki/Flowchart</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>IBM engineers implemented programming flowcharts based upon Goldstine and von Neumann's unpublished report, "Planning and coding of problems for an electronic computing instrument, Part II, Volume 1" (1947), which is reproduced in von Neumann's collected works.</p>
+<p>The flowchart became a popular tool for describing computer algorithms, but its popularity decreased in the 1970s, when interactive computer terminals and third-generation programming languages became common tools for computer programming, since algorithms can be expressed more concisely as source code in such languages. Often pseudo-code is used, which uses the common idioms of such languages without strictly adhering to the details of a particular one.</p>
+<p>Nowadays flowcharts are still used for describing computer algorithms.[9] Modern techniques such as UML activity diagrams and Drakon-charts can be considered to be extensions of the flowchart.</p>
+<p>Nearly all flowcharts focus on on some kind of control, rather than on the particular flow itself!  While quaint today, they are an effective way to document processes in a program and visualize structures.  We recomend you get in the habit of making rudimentary flowcharts, at least at the supervisory level (the sandwich chart above)</p>
+<h3 id="how-are-they-useful">How are they useful?</h3>
+<p>(paraphrased from <a href="https://www.breezetree.com/articles/top-reasons-to-flowchart">https://www.breezetree.com/articles/top-reasons-to-flowchart</a>)</p>
+<p>Sometimes it's more effective to visualize something graphically that it is to describe it with words. That is the essence of what flowcharts do for you. Flowcharts explain a process clearly through symbols and text. Moreover, flowcharts give you the gist of the process flow in a single glance. The following are some of the more salient reasons to use flowcharts.</p>
+<p><strong>Process Documentation / Training Materials</strong>
+Another common use for flowcharts is to create process documentation. Although this reason overlaps with regulatory and quality management requirements (below), many non-regulated businesses use flowcharts for their documentation as well. These can range in form from high-level procedures to low-level, detailed work instructions.</p>
+<p>You may think that this applies mainly to large organizations, but small companies can greatly benefit from flowcharting their processes as well. Small enterprises need to be nimble and organized. Standardizing their processes is a great way to achieve this. In fact, the popular entrepreneurial book The E-Myth Revisited: Why Most Small Businesses Don't Work and What to Do About It by Michael Gerber is based on the fact that small businesses are more likely to succeed if they treat their operations like a franchise. in a nutshell, this means standardizing and documenting their business processes. There's no better way to do that than with flowcharts, right?</p>
+<p>Training materials are often created using flowcharts because they're visually stimulating and easy to understand. A nicely laid out flowchart will gain and hold the reader's attention when a block of text will often fail.</p>
+<p><strong>Workflow Management and Continuous Improvement</strong>
+Workflows don't manage themselves. To ensure that you are meeting your customers' needs, you need to take control of your business processes. The first step to workflow management is to define the current state of your processes by creating an "As-Is Flowchart". That allows you to analyze your processes for waste and inefficiency. After you have identified areas for process improvement, you can then craft new flowcharts to document the leaner processes.</p>
+<p><strong>Programming</strong>
+Information technology played a big influence on the use and spread of flowcharts in the 20th century. While Dr. W. Edwards Deming was advocating their use in quality management, professionals in the data processing world were using them to flesh out their programming logic. Flowcharts were a mainstay of procedural programming, however, and with the advent of object oriented programming and various modeling tools, the use of flowcharts for programming is no longer as commonplace as it once was.</p>
+<p>That said, even with in the scope of object oriented programming, complex program logic can be modeled effectively using a flowchart. Moreover, diagramming the user's experience as they navigate through a program is a valuable prerequisite prior to designing the user interface. So flowcharts still have their place in the world of programming.</p>
+<p><strong>Troubleshooting Guides</strong>
+Most of us have come across a troubleshooting flowchart at one time or another. These are usually in the form of Decision Trees that progressively narrow the range of possible solutions based on a series of criteria. The effectiveness of these types of flowcharts depends on how neatly the range of problems and solutions can fit into a simple True/False diagnosis model. A well done troubleshooting flowcharts can cut the problem solving time greatly.</p>
+<p><strong>Regulatory and Quality Management Requirements</strong>
+Your business processes may be subject to regulatory requirements such as Sarbanes-Oxley (SOX), which requires that your accounting procedures be clearly defined and documented. An easy way to do this is to create accounting flowcharts for all your accounting processes.</p>
+<p>Similarly, many organizations fall under certification requirements for quality management systems - such as ISO 9000, TS 16949, or one of the many others. In such environments, flowcharts are not only useful but in certain clauses they are actually mandated.</p>
+<h2 id="psuedocode">Psuedocode</h2>
+<p>Define</p>
+<h2 id="readings">Readings</h2>
+<ol>
+<li>
+<p>Learn Python in One Day and Learn It Well. Python for Beginners with Hands-on Project. (Learn Coding Fast with Hands-On Project Book -- Kindle Edition by LCF Publishing (Author), Jamie Chan <a href="https://www.amazon.com/Python-2nd-Beginners-Hands-Project-ebook/dp/B071Z2Q6TQ/ref=sr_1_3?dchild=1&amp;keywords=learn+python+in+a+day&amp;qid=1611108340&amp;sr=8-3">https://www.amazon.com/Python-2nd-Beginners-Hands-Project-ebook/dp/B071Z2Q6TQ/ref=sr_1_3?dchild=1&amp;keywords=learn+python+in+a+day&amp;qid=1611108340&amp;sr=8-3</a></p>
+</li>
+<li>
+<p>Learn Python the Hard Way (Online Book) (https://learnpythonthehardway.org/book/)  Recommended for beginners who want a complete course in programming with Python.</p>
+</li>
+<li>
+<p>How to Learn Python for Data Science, The Self-Starter Way (https://elitedatascience.com/learn-python-for-data-science) </p>
+</li>
+<li>
+<p>Flowcharts (QA/QC Perspective) <a href="https://asq.org/quality-resources/flowchart">https://asq.org/quality-resources/flowchart</a></p>
+</li>
+<li>
+<p>Flowcharts - Wikipedia <a href="https://en.wikipedia.org/wiki/Flowchart">https://en.wikipedia.org/wiki/Flowchart</a></p>
+</li>
+<li>
+<p>Psuedocode - Wikipedia <a href="https://en.wikipedia.org/wiki/Pseudocode">https://en.wikipedia.org/wiki/Pseudocode</a></p>
+</li>
+</ol>
+<pre><code class="python">
+</code></pre></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" defer></script>
+        <script src="../../../mathjaxhelper.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

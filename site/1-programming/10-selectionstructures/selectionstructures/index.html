@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>Selection Structures - P4E</title>
+        <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../../..">P4E</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="../../..">Home</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Programming <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../2-expressions/expressions/">Expressions</a>
+</li>
+                                    
+<li >
+    <a href="../../3-datatypes/datatypes/">Data Types</a>
+</li>
+                                    
+<li >
+    <a href="../../4-variables/variables/">Variables</a>
+</li>
+                                    
+<li >
+    <a href="../../5-mutabledatastructures/mutabledatastructures/">Data Structures (mutable)</a>
+</li>
+                                    
+<li >
+    <a href="../../6-immutabledatastructures/immutabledatastructures/">Data Structures (immutable)</a>
+</li>
+                                    
+<li >
+    <a href="../../7-userinteraction/userinteraction/">User Interaction</a>
+</li>
+                                    
+<li >
+    <a href="../../8-algorithmbuildingblocks/algorithmbuildingblocks/">Algorithm Building Blocks</a>
+</li>
+                                    
+<li >
+    <a href="../../9-sequentialstructures/sequentialstructures/">Sequential Structures</a>
+</li>
+                                    
+<li class="active">
+    <a href="./">Selection Structures</a>
+</li>
+                                    
+<li >
+    <a href="../../11-repetitionstructures/ccrepetitionstructures/">Count Controlled Repetition</a>
+</li>
+                                    
+<li >
+    <a href="../../11-repetitionstructures/screpetitionstructures/">Sentinel Controlled Repetition</a>
+</li>
+                                    
+<li >
+    <a href="../../13-functions/functions/">Functions</a>
+</li>
+                                    
+<li >
+    <a href="../../14-externalmodules/externalmodules/">External Modules</a>
+</li>
+                                    
+<li >
+    <a href="../../15-workingwithfiles/workingwithfiles/">Working With Files</a>
+</li>
+                                    
+<li >
+    <a href="../../16-morefilemanipulation/morefilemanipulation/">More File Manipulation</a>
+</li>
+                                    
+<li >
+    <a href="../../17-workingwitharray/workingwitharray/">Working with ARRAY</a>
+</li>
+                                    
+<li >
+    <a href="../../18-arrayprocessingwithnumpy/arrayprocessingwithnumpy/">Array processing with NUMPY</a>
+</li>
+                                    
+<li >
+    <a href="../../19-databaseconcepts/databaseconcepts/">Database Concepts</a>
+</li>
+                                    
+<li >
+    <a href="../../20-databaseprocessingwithpandas/databaseprocessingwithpandas/">Database processing with PANDAS</a>
+</li>
+                                    
+<li >
+    <a href="../../21-visualdisplayofdata/visualdisplayofdata/">Visual Display of Data</a>
+</li>
+                                    
+<li >
+    <a href="../../22-plottingwithmatplotlab/plottingwithmatplotlab/">Plotting with MATPLOTLAB</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Data Modeling <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../2-datamodeling/23-datamodelsandvisualization/datamodelsandvisualization/">Data Models and Visualization</a>
+</li>
+                                </ul>
+                            </li>
+                            <li >
+                                <a href="../../../readings.md">Additional Readings</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="../../9-sequentialstructures/sequentialstructures/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../../11-repetitionstructures/ccrepetitionstructures/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#selection-structures">Selection Structures</a></li>
+            <li><a href="#conditional-statements">Conditional Statements</a></li>
+            <li><a href="#example-light-pipes">Example: Light Pipes</a></li>
+            <li><a href="#readings">Readings</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="selection-structures">Selection Structures</h1>
+<p>Decision making via conditional statements is an important building block in algorithm design; Selection is used to control the flow of execution of a program.</p>
+<hr />
+<h2 id="conditional-statements">Conditional Statements</h2>
+<p>Conditional statements in Python include:</p>
+<ul>
+<li><code>if</code> statement</li>
+<li><code>if....else</code> statements</li>
+<li><code>if....elif....else</code> statements</li>
+</ul>
+<p>Conditional statements are logical expressions that evaluate as TRUE or FALSE and using
+these results to perform further operations based on these conditions.</p>
+<p>Nearly all flow control in a program depends on evaluating conditions. 
+The program will proceed
+diferently based on the outcome of one or more conditions - really sophisticated AI programs are a collection of conditions and correlations. </p>
+<p>Expressed in a flowchart a block <code>if</code> statement looks like:</p>
+<p><img alt="" src="../conditional.png" /></p>
+<p>As psuedo code:</p>
+<pre><code>if(condition is true): 
+    do stuff
+</code></pre>
+<p>Amazon knowing what you want is based on correlations of your past behavior compared to other peoples similar, but more recent behavior, and then it uses conditional statements to decide what item to offer you in your recommendation items. 
+It's a bit spooky, but ultimately just a program running in the background trying to make your money theirs.</p>
+<h3 id="comparison">Comparison</h3>
+<p>The most common conditional operation is comparison. If we wish to compare whether two
+variables are the same we use the <code>==</code> (double equal sign).</p>
+<p>For example <code>x == y</code> means the program will ask whether x and y have the same value. 
+If they do, the result is TRUE if not then the result is FALSE.</p>
+<p>Other comparison signs are <code>!=</code> does NOT equal, <code>&lt;</code> smaller than, <code>&gt;</code>larger than, <code>&lt;=</code>less than or equal, and <code>&gt;=</code> greater than or equal.</p>
+<p>There are also three logical operators when we want to build multiple compares
+(multiple conditioning); these are <code>and</code>, <code>or</code>, and <code>not</code>.</p>
+<p>The <code>and</code> operator returns TRUE if (and only if) <strong>all</strong> conditions are TRUE.
+For instance <code>5 == 5 and 5 &lt; 6</code> will return a TRUE because both conditions are true.</p>
+<p>The <code>or</code> operator returns <code>TRUE</code> if at least one condition is true. 
+If <strong>all</strong> conditions are FALSE, then it will return a FALSE. For instance <code>4 &gt; 3 or 17 &gt; 20 or 3 == 2</code> will return <code>TRUE</code> because the first condition is true.
+The <code>not</code> operator returns <code>TRUE</code> if the condition after the <code>not</code> keyword is false. Think of it
+as a way to do a logic reversal.</p>
+<pre><code class="python"># Examples
+</code></pre>
+
+<h3 id="block-if-statement">Block <code>if</code> statement</h3>
+<p>The <code>if</code> statement is a common flow control statement. 
+It allows the program to evaluate if a certain condition is satisfied and to perform a designed action based on the result of the evaluation. The structure of an <code>if</code> statement is</p>
+<pre><code>if condition1 is met:
+    do A
+elif condition 2 is met:
+    do b
+elif condition 3 is met:
+    do c
+else:
+    do e
+</code></pre>
+<p>The <code>elif</code> means "else if". The <code>:</code> colon is an important part of the structure it tells where the action begins. Also there are no scope delimiters like (), or {} . 
+Instead Python uses indentation to isolate blocks of code. </p>
+<p>This convention is hugely important - many other coding environments use delimiters (called scoping delimiters), but Python does not. The indentation itself is the scoping delimiter.</p>
+<pre><code class="python"># Examples
+</code></pre>
+
+<h3 id="inline-if-statement">Inline <code>if</code> statement</h3>
+<p>An inline <code>if</code> statement is a simpler form of an <code>if</code> statement and is more convenient if you
+only need to perform a simple conditional task. 
+The syntax is:</p>
+<pre><code>do TaskA `if` condition is true `else` do TaskB
+</code></pre>
+<p>An example would be</p>
+<pre><code class="python">myInt = 3
+num1 = 12 if myInt == 0 else 13
+print(num1)
+</code></pre>
+
+<pre><code>13
+</code></pre>
+<p>An alternative way is to enclose the condition in brackets for some clarity like</p>
+<pre><code class="python">myInt = 3
+num1 = 12 if (myInt == 0) else 13
+print(num1)
+</code></pre>
+
+<pre><code>13
+</code></pre>
+<p>In either case the result is that <code>num1</code> will have the value <code>13</code> (unless you set myInt to 0).</p>
+<h2 id="example-light-pipes">Example: Light Pipes</h2>
+<p>If light is directed into one end of a long glass or plastic rod the light is totally reflected by the walls bounging until it reaches the end of the rod.  Light pipes use this optical phenomenon to transmit light and even images from one place to another.  If one bends a light pipe the light can be coaxed to follow the pipe and curve around corners -- if the pipes are bundled into a collection of fibers mutiple signals can be sent down each fiber and these bundles are the main component of optical fiber communication and is schematized in the figure below.</p>
+<p><img alt="lightpipeconcept" src="../lightpipeconcept.png" /></p>
+<p>The total internal reflection can be predicted using Snell's law and the indices of refraction of the fiber and jacket materials.  Usually the core material is selected with a high refractive index compared to the jacket (which may be just air).  When light passes from one material to another it is bent at the interface proportional to the refractive indices and the angle of incidence at the interface as in the sketch below</p>
+<p><img alt="lightpipesketch" src="../lightpipesketch.png" /></p>
+<p>The angle of incidence where the light will reflect as opposed to crossing the interface is called the critical angle <script type="math/tex">\Theta_c</script> and is subject to the formula:</p>
+<p>
+<script type="math/tex">sin~\Theta_c = \frac{n_2}{n_1}</script>
+</p>
+<p>where <script type="math/tex">n_1</script> is the refractive index of the fiber core and <script type="math/tex">n_2</script> is the refractive index of the jacket.</p>
+<p>If the jacket has a higher refractive index than the core, the light pipe will not transmit light from one end to another regardless of the incidence angle.  If not, then any incidence angle greater than the critical angle (e.g. closer to the pipe entry axis) will sucessfully achieve internal reflection and transmit.</p>
+<p>Suppose we wished to make a design tool to let designers evaluate different materials and determine if a particular material selection makes sense, and how small an angle will work (smaller means less precision is required at the entry/exit interface).  Lets apply the problem solving protocol, and a bit of computational thinking to develop a tool.</p>
+<hr />
+<p><strong>Step 1 Problem Statement:</strong> 
+Determine whether a light pipe constructed of two materials will transmit light that enters the pipe at a prescribed angle</p>
+<p><strong>Step 2 Input/Output/Governing Principles</strong>
+Inputs are the indices of refraction of the core (<script type="math/tex">n_1</script>) and jacket(<script type="math/tex">n_2</script>) materials and the light incident angle at the pipe entrance (<script type="math/tex">\Theta_i</script>)</p>
+<p>The governing equations are </p>
+<p>
+<script type="math/tex">\text{If}~\Theta_i > \Theta_c~\text{then light will propagate} </script>
+</p>
+<p>and </p>
+<p>
+<script type="math/tex">sin~\Theta_c = \frac{n_2}{n_1}</script>
+</p>
+<p><strong>Step 3 By-Hand Example</strong>
+Consider a core made of optical glass (without coatings) surrounded by air - a pipe without a jacket.
+The <a href="https://www.google.com/search?client=firefox-b-1-d&amp;q=refractive+index+of+air">refraction index for air</a> is 1.0003.  The <a href="https://www.google.com/search?q=refractive+index+of+glass&amp;client=firefox-b-1-d&amp;ei=jVDzYJmNIca0tQaDgb_gAg&amp;oq=refractive+index+of+glass&amp;gs_lcp=Cgdnd3Mtd2l6EAMyBAgAEEMyAggAMgIIADICCAAyAggAMgIIADICCAAyAggAMgIIADICCAA6BwgAEEcQsAM6BwgAELADEENKBAhBGABQ8_kCWNyCA2CejANoAXACeACAAV2IAaQDkgEBNpgBAKABAaoBB2d3cy13aXrIAQrAAQE&amp;sclient=gws-wiz&amp;ved=0ahUKEwjZh4__iuvxAhVGWs0KHYPADywQ4dUDCA0&amp;uact=5">index of refraction for glass</a> is 1.52</p>
+<p>The critical angle is </p>
+<p>
+<script type="math/tex">\Theta_c = sin^{-1}(\frac{1.0003}{1.52})= 41.15^o</script>
+</p>
+<p>Thus the light pipe will transmit all light that enters at an angle greater than 41.15 degrees.</p>
+<p><strong>Step 4 Algorithm Development</strong>
+The problem is decomposed as </p>
+<ol>
+<li>Read into the application the refraction indices <script type="math/tex">n_1</script> and <script type="math/tex">n_2</script> and the incidence angle relative to the core/jacket wall.</li>
+<li>Determine if <script type="math/tex">n_2</script> is larger than <script type="math/tex">n_1</script>, if true then no transmission</li>
+<li>If transmission is possible, then compute critical angle</li>
+<li>Determine if incident angle larger than critical angle, if true then transmission</li>
+<li>Report result</li>
+</ol>
+<p>As psuedocode:</p>
+<ul>
+<li>prompt user for n1,n2,angle</li>
+<li>if n2&gt;n1 print no transmission else</li>
+<li>compute critical angle</li>
+<li>if incident angle &gt; critical angle then print transmission</li>
+<li>else print no transmission</li>
+</ul>
+<p>Below we convert psuedocode to python script</p>
+<pre><code class="python"># load the math library
+import math
+# prompt user for n1,n2,angle
+print('Begin Light Pipe Design')
+n1 = float(input('Enter RI of pipe core'))
+n2 = float(input('Enter RI of pipe jacket'))
+anglein = float(input('Enter incident angle of light (in degrees)'))
+# if n2&gt;n1 print no transmission else
+if (n2&gt;n1): # selection structure
+    print('Light not transmitted, jacket material too dense')
+else:
+# compute critical angle
+    critangle = math.degrees(math.asin(n2/n1)) #use math package for arcsine
+# if incident angle &gt; critical angle then print transmission
+    if anglein &gt; critangle:  # selection structure
+        print('Light is transmitted')
+# else print no transmission
+    else:
+        print('Light is not transmitted, adjust interface angle')
+print('End Light Pipe Design')
+</code></pre>
+
+<pre><code>Begin Light Pipe Design
+
+
+Enter RI of pipe core 1.52
+Enter RI of pipe jacket 1.0003
+Enter incident angle of light (in degrees) 45
+
+
+Light is transmitted
+End Light Pipe Design
+</code></pre>
+<p>Now we have a tool and can evaluate a variety of material pairs to build a light pipe.  </p>
+<table>
+<thead>
+<tr>
+<th><strong>Material</strong></th>
+<th align="right"><strong>Index of Refraction</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hydrogen      (1 atm.;0C)</td>
+<td align="right">1.0001</td>
+</tr>
+<tr>
+<td>Air           (1 atm.;0C)</td>
+<td align="right">1.0003</td>
+</tr>
+<tr>
+<td>Carbon Dioxide(1 atm.;0C)</td>
+<td align="right">1.0005</td>
+</tr>
+<tr>
+<td>Water               (20C)</td>
+<td align="right">1.333</td>
+</tr>
+<tr>
+<td>Ethanol             (20C)</td>
+<td align="right">1.362</td>
+</tr>
+<tr>
+<td>Glycerine           (20C)</td>
+<td align="right">1.473</td>
+</tr>
+<tr>
+<td>Ice</td>
+<td align="right">1.31</td>
+</tr>
+<tr>
+<td>Polystryene</td>
+<td align="right">1.59</td>
+</tr>
+<tr>
+<td>Crown Glass</td>
+<td align="right">1.62</td>
+</tr>
+<tr>
+<td>Borosilicate</td>
+<td align="right">1.75</td>
+</tr>
+<tr>
+<td>Carbon (Diamond)</td>
+<td align="right">2.417</td>
+</tr>
+<tr>
+<td>Acrylic</td>
+<td align="right">1.49</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Step 5 Testing/Application</strong>
+Apply using acrylic in water</p>
+<pre><code class="python"># load the math library
+import math
+# prompt user for n1,n2,angle
+print('Begin Light Pipe Design')
+n1 = float(input('Enter RI of pipe core'))
+n2 = float(input('Enter RI of pipe jacket'))
+anglein = float(input('Enter incident angle of light (in degrees)'))
+# if n2&gt;n1 print no transmission else
+if (n2&gt;n1): # selection structure
+    print('Light not transmitted, jacket material too dense')
+else:
+# compute critical angle
+    critangle = math.degrees(math.asin(n2/n1)) #use math package for arcsine
+# if incident angle &gt; critical angle then print transmission
+    if anglein &gt; critangle:  # selection structure
+        print('Light is transmitted')
+# else print no transmission
+    else:
+        print('Light is not transmitted, adjust interface angle')
+print('End Light Pipe Design')
+</code></pre>
+
+<pre><code>Begin Light Pipe Design
+
+
+Enter RI of pipe core 1.49
+Enter RI of pipe jacket 1.333
+Enter incident angle of light (in degrees) 45
+
+
+Light is not transmitted, adjust interface angle
+End Light Pipe Design
+</code></pre>
+<h2 id="readings">Readings</h2>
+<ol>
+<li>
+<p>Learn Python in One Day and Learn It Well. Python for Beginners with Hands-on Project. (Learn Coding Fast with Hands-On Project Book -- Kindle Edition by LCF Publishing (Author), Jamie Chan <a href="https://www.amazon.com/Python-2nd-Beginners-Hands-Project-ebook/dp/B071Z2Q6TQ/ref=sr_1_3?dchild=1&amp;keywords=learn+python+in+a+day&amp;qid=1611108340&amp;sr=8-3">https://www.amazon.com/Python-2nd-Beginners-Hands-Project-ebook/dp/B071Z2Q6TQ/ref=sr_1_3?dchild=1&amp;keywords=learn+python+in+a+day&amp;qid=1611108340&amp;sr=8-3</a></p>
+</li>
+<li>
+<p>Learn Python the Hard Way (Online Book) (https://learnpythonthehardway.org/book/)  Recommended for beginners who want a complete course in programming with Python.</p>
+</li>
+<li>
+<p>How to Learn Python for Data Science, The Self-Starter Way (https://elitedatascience.com/learn-python-for-data-science) </p>
+</li>
+</ol>
+<pre><code class="python">
+</code></pre></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" defer></script>
+        <script src="../../../mathjaxhelper.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>Functions - P4E</title>
+        <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../../..">P4E</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="../../..">Home</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Programming <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../2-expressions/expressions/">Expressions</a>
+</li>
+                                    
+<li >
+    <a href="../../3-datatypes/datatypes/">Data Types</a>
+</li>
+                                    
+<li >
+    <a href="../../4-variables/variables/">Variables</a>
+</li>
+                                    
+<li >
+    <a href="../../5-mutabledatastructures/mutabledatastructures/">Data Structures (mutable)</a>
+</li>
+                                    
+<li >
+    <a href="../../6-immutabledatastructures/immutabledatastructures/">Data Structures (immutable)</a>
+</li>
+                                    
+<li >
+    <a href="../../7-userinteraction/userinteraction/">User Interaction</a>
+</li>
+                                    
+<li >
+    <a href="../../8-algorithmbuildingblocks/algorithmbuildingblocks/">Algorithm Building Blocks</a>
+</li>
+                                    
+<li >
+    <a href="../../9-sequentialstructures/sequentialstructures/">Sequential Structures</a>
+</li>
+                                    
+<li >
+    <a href="../../10-selectionstructures/selectionstructures/">Selection Structures</a>
+</li>
+                                    
+<li >
+    <a href="../../11-repetitionstructures/ccrepetitionstructures/">Count Controlled Repetition</a>
+</li>
+                                    
+<li >
+    <a href="../../11-repetitionstructures/screpetitionstructures/">Sentinel Controlled Repetition</a>
+</li>
+                                    
+<li class="active">
+    <a href="./">Functions</a>
+</li>
+                                    
+<li >
+    <a href="../../14-externalmodules/externalmodules/">External Modules</a>
+</li>
+                                    
+<li >
+    <a href="../../15-workingwithfiles/workingwithfiles/">Working With Files</a>
+</li>
+                                    
+<li >
+    <a href="../../16-morefilemanipulation/morefilemanipulation/">More File Manipulation</a>
+</li>
+                                    
+<li >
+    <a href="../../17-workingwitharray/workingwitharray/">Working with ARRAY</a>
+</li>
+                                    
+<li >
+    <a href="../../18-arrayprocessingwithnumpy/arrayprocessingwithnumpy/">Array processing with NUMPY</a>
+</li>
+                                    
+<li >
+    <a href="../../19-databaseconcepts/databaseconcepts/">Database Concepts</a>
+</li>
+                                    
+<li >
+    <a href="../../20-databaseprocessingwithpandas/databaseprocessingwithpandas/">Database processing with PANDAS</a>
+</li>
+                                    
+<li >
+    <a href="../../21-visualdisplayofdata/visualdisplayofdata/">Visual Display of Data</a>
+</li>
+                                    
+<li >
+    <a href="../../22-plottingwithmatplotlab/plottingwithmatplotlab/">Plotting with MATPLOTLAB</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Data Modeling <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../2-datamodeling/23-datamodelsandvisualization/datamodelsandvisualization/">Data Models and Visualization</a>
+</li>
+                                </ul>
+                            </li>
+                            <li >
+                                <a href="../../../readings.md">Additional Readings</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="../../11-repetitionstructures/screpetitionstructures/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../../14-externalmodules/externalmodules/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#function">Function</a></li>
+            <li><a href="#calling-the-function">Calling the Function</a></li>
+            <li><a href="#program-flow">Program flow</a></li>
+            <li><a href="#intrinsic-built-in-in-base-python">Intrinsic (Built-in) in Base Python</a></li>
+            <li><a href="#using-external-packagesmodules-and-libaries-eg-math">Using External Packages/Modules and Libaries (e.g. math)</a></li>
+            <li><a href="#user-built">User-Built</a></li>
+            <li><a href="#variable-scope">Variable Scope</a></li>
+            <li><a href="#temperature-converter-example">Temperature Converter Example</a></li>
+            <li><a href="#references">References</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="function">Function</h1>
+<p>Functions are simply pre-written code fragments that perform a certain task. In older procedural languages functions and subroutines are similar, but a function returns a value whereas a subroutine operates on data. The difference is subtle but important. </p>
+<p>More recent thinking has functions being able to operate on data (they always could) and the value returned may be simply an exit code. An analogy are the functions in <em>MS Excel</em>. To add numbers, we can use the sum(range) function and type <code>=sum(A1:A5)</code> instead of typing <code>=A1+A2+A3+A4+A5</code></p>
+<h2 id="calling-the-function">Calling the Function</h2>
+<p>We call a function simply by typing the name of the function or by using the dot notation.
+Whether we can use the dot notation or not depends on how the function is written, whether it is part of a class, and how it is imported into a program.</p>
+<p>Some functions expect us to pass data to them to perform their tasks. 
+These data are known as parameters( older terminology is arguments, or argument list) and we pass them to the function by enclosing their values in parenthesis ( ) separated by commas. </p>
+<p>For instance, the <code>print()</code> function for displaying text on the screen is \called" by typing <code>print('Hello World')</code> where print is the name of the function and the literal (a string) 'Hello World' is the argument.</p>
+<h2 id="program-flow">Program flow</h2>
+<p>A function, whether built-in, or added must be defined <em>before</em> it is called, otherwise the script will fail.  Certain built-in functions "self define" upon start (such as <code>print()</code> and <code>type()</code> and we need not worry about those funtions).  The diagram below illustrates the requesite flow control for functions that need to be defined before use.</p>
+<p><img alt="" src="../flow-control-diagram.png" /></p>
+<p>An example below  will illustrate, change the cell to code and run it, you should get an error.
+Then fix the indicated line (remove the leading "#" in the import math ... line) and rerun, should get a functioning script.</p>
+<pre><code class="python"># reset the notebook using a magic function in JupyterLab
+%reset -f 
+# An example, run once as is then activate indicated line, run again - what happens?
+x= 4.
+sqrt_by_arithmetic = x**0.5
+print('Using arithmetic square root of ', x, ' is ',sqrt_by_arithmetic )
+import math # import the math package ## activate and rerun
+sqrt_by_math = math.sqrt(x)  # note the dot notation
+print('Using math package square root of ',  x,' is ',sqrt_by_arithmetic)
+</code></pre>
+
+<pre><code>Using arithmetic square root of  4.0  is  2.0
+Using math package square root of  4.0  is  2.0
+</code></pre>
+<p>An alternate way to load just the sqrt() function is shown below, either way is fine.</p>
+<pre><code class="python"># reset the notebook using a magic function in JupyterLab
+%reset -f 
+# An example, run once as is then activate indicated line, run again - what happens?
+x= 4.
+sqrt_by_arithmetic = x**0.5
+print('Using arithmetic square root of ', x, ' is ',sqrt_by_arithmetic )
+from math import sqrt # import sqrt from the math package ## activate and rerun
+sqrt_by_math = sqrt(x)  # note the notation
+print('Using math package square root of ',  x,' is ',sqrt_by_arithmetic)
+</code></pre>
+
+<pre><code>Using arithmetic square root of  4.0  is  2.0
+Using math package square root of  4.0  is  2.0
+</code></pre>
+<h2 id="intrinsic-built-in-in-base-python">Intrinsic (Built-in) in Base Python</h2>
+<p>The base Python functions and types built into it that are always available, the figure below lists those functions.</p>
+<p><img alt="" src="../base-functions.png" /></p>
+<p>Notice all have the structure of <code>function_name()</code>, except <code>__import__()</code> which has a constructor type structure, and is not intended for routine use.  We will learn about constructors later.</p>
+<h2 id="using-external-packagesmodules-and-libaries-eg-math">Using External Packages/Modules and Libaries (e.g. math)</h2>
+<p>Python is also distributed with a large number of external functions. 
+These functions are saved
+in files known as modules. 
+To use the built-in codes in Python modules, we have to import
+them into our programs first. We do that by using the import keyword. 
+There are three
+ways to import:</p>
+<ol>
+<li>Import the entire module by writing import moduleName; For instance, to import the random module, we write import random. To use the randrange() function in the random module, we write random.randrange( 1, 10);28</li>
+<li>Import and rename the module by writing import random as r (where r is any name of your choice). Now to use the randrange() function, you simply write r.randrange(1, 10); and</li>
+<li>Import specific functions from the module by writing from moduleName import name1[,name2[, ... nameN]]. For instance, to import the randrange() function from the random module, we write from random import randrange. To import multiple functions, we separate them with a comma. To import the randrange() and randint() functions, we write from random import randrange, randint. To use the function now, we do not have to use the dot notation anymore. Just write randrange( 1, 10).</li>
+</ol>
+<p>A couple of usually available modules that install with base python are <code>math</code> and <code>array</code>.  Other modules we will use may need a separate system install (using pip or conda) are <code>numpy</code>, <code>pandas</code>, and <code>matplotlib</code>.  This notebook is created on a Raspberry Pi running a JupyterHub server, so these modules are installed using pip.  </p>
+<p>If you build your environment using Anaconda, these modules should be available simply via <code>import</code>.</p>
+<pre><code class="python"># Example 1 of import
+%reset -f 
+import random
+low = 1 ; high = 10
+random.randrange(low,high) #generate random number in range low to high
+</code></pre>
+
+<pre><code>3
+</code></pre>
+<pre><code class="python"># Example 2 of import
+%reset -f 
+import random as r #the alias r replaces random in subsequent calls
+low = 1 ; high = 10
+r.randrange(low,high)
+</code></pre>
+
+<pre><code>7
+</code></pre>
+<pre><code class="python"># Example 3 of import
+%reset -f 
+from random import randrange # importing a single function from a module
+low = 1 ; high = 10
+randrange(low,high)
+</code></pre>
+
+<pre><code>6
+</code></pre>
+<p>The modules that come with Python are extensive and listed at 
+https://docs.python.org/3/py-modindex.html.
+There are also other modules that can be downloaded and used
+(just like user defined modules below). 
+In these labs we are building primitive codes to learn how to code and how to create algorithms. 
+For many practical cases you will want to load a well-tested package to accomplish the tasks. </p>
+<h2 id="user-built">User-Built</h2>
+<p>We can define our own functions in Python and reuse them throughout the program.
+The syntax for defining a function is (the fragment below is psuedocode - it won't cut and paste!):</p>
+<pre><code>def functionName( argument ):
+    code detailing what the function should do
+    note the colon above and indentation
+    ...
+    ...
+    return [expression]
+</code></pre>
+<p>The keyword <code>def</code> tells the program that the indented code from the next line onwards is
+part of the function. 
+The keyword <code>return</code>tells the program to return an answer from the
+function. 
+There can be multiple return statements in a function. 
+Once the function executes
+a return statement, the program exits the function and continues with <em>its</em> next executable
+statement. 
+If the function does not need to return any value, you can omit the return
+statement, but putting either null or exit code returns is good practice for code maintenance.</p>
+<p>Functions can be pretty elaborate; they can search for things in a list, determine variable
+types, open and close files, read and write to files. </p>
+<p>To get started we will build a few really
+simple mathematical functions; we will need this skill in the future anyway, especially in
+scientific programming contexts.</p>
+<h3 id="user-built-within-a-code-block">User-built within a Code Block</h3>
+<p>For our first function we will code <script type="math/tex; mode=display">f(x) = x\sqrt{1 + x}</script> into a function named <code>dusty()</code>.</p>
+<p>When you run the next cell, all it does is prototype the function (defines it), nothing happens until we use the function.</p>
+<pre><code class="python">def dusty(x) :
+    temp = x * ((1.0+x)**(0.5)) # don't need the math package
+    return temp
+# the function should make the evaluation
+# store in the local variable temp
+# return contents of temp
+</code></pre>
+
+<pre><code class="python"># wrapper to run the dusty function
+yes = 0
+while yes == 0:
+    xvalue = input('enter a numeric value')
+    try:
+        xvalue = float(xvalue)
+        yes = 1
+    except:
+        print('enter a bloody number! Try again \n')
+# call the function, get value , write output
+yvalue = dusty(xvalue)
+print('f(',xvalue,') = ',yvalue) # and we are done 
+</code></pre>
+
+<pre><code>enter a numeric value 3
+
+
+f( 3.0 ) =  6.0
+</code></pre>
+<h2 id="variable-scope">Variable Scope</h2>
+<p>An important concept when defining a function is the concept of variable scope. 
+Variables defined inside a function are treated differently from variables defined outside. 
+Firstly, any variable declared within a function is only accessible within the function, unless explicitly defined otherwise (Google "python global variable" to learn more)
+These are known as local variables. </p>
+<p>In the <code>dusty()</code> function, the variables <code>x</code> and <code>temp</code> are local to the function.
+Any variable declared outside a function in a main program is known as a program variable
+and is accessible anywhere in the main program, but not in functions unless supplied as a parameter. </p>
+<p>In the example, the variables <code>xvalue</code> and <code>yvalue</code> are program variables (accessible to the program; if they are passed to a function, they can be operated on.)
+Generally we want to protect the program variables from the function unless the intent is to change their values. 
+The way the function is written in the example, the function cannot damage <code>xvalue</code> or <code>yvalue</code>, but the contents of <code>xvalue</code> are operated on by the function and the results returned from <code>dusty</code> and stored in <code>yvalue</code>.</p>
+<p>If a local variable shares the same name as a program variable, any code inside the function is
+accessing the local variable. Any code outside is accessing the program variable</p>
+<pre><code class="python">def mercy(x) :
+    temp = x * ((1.0+x)**(0.5)) # don't need the math package
+    x = x+2
+    print('Value of x in mercy is: ',x)
+    return temp
+</code></pre>
+
+<pre><code class="python">x = 2
+y = mercy(x) 
+print('Value of x in main  is: ',x,' Value of y is: ',y) # function did not change value of x in program
+</code></pre>
+
+<pre><code>Value of x in mercy is:  4
+Value of x in main  is:  2  Value of y is:  3.4641016151377544
+</code></pre>
+<pre><code class="python">
+</code></pre>
+
+<hr />
+<h2 id="temperature-converter-example">Temperature Converter Example</h2>
+<p>Create a Fahrenhiet to Celsius converter and test it for these values:</p>
+<ul>
+<li>32</li>
+<li>15</li>
+<li>100</li>
+</ul>
+<p>*hint: Formula-(°F − 32) × 5/9 = °C</p>
+<h3 id="problem-solving-process">Problem Solving Process</h3>
+<h4 id="step-1">Step 1</h4>
+<p>Define the problem (problem statement):
+- Create a tool to convert Fahrenhiet to Celsius</p>
+<h4 id="step-2">Step 2</h4>
+<p>Gather information (identify known and unknown values, and governing equations)
+- Known: Input in F
+- Unknown: Output in C
+- Governing Principles: <em>Formula: (°F − 32) × 5/9 = °C</em></p>
+<h4 id="step-3">Step 3</h4>
+<p>Generate and evaluate potential solutions
+- -40F = -40C
+- 32F = 0C
+- 212F = 100C</p>
+<h4 id="step-4">Step 4</h4>
+<p>Refine and implement a solution
+1. Create function to evaluate input and produce output</p>
+<pre><code class="python">def FC(x) : # convert F to C
+    C = (x - 32)*5/9
+    return C
+</code></pre>
+
+<ol>
+<li>Create a wrapper supply input, execute function, label output</li>
+</ol>
+<pre><code class="python">print(FC(99))
+</code></pre>
+
+<pre><code>37.22222222222222
+</code></pre>
+<h4 id="step-5">Step 5</h4>
+<p>Verify and test the solution.</p>
+<pre><code class="python">print(FC(-40))
+</code></pre>
+
+<pre><code>-40.0
+</code></pre>
+<pre><code class="python">print(FC(32))
+</code></pre>
+
+<pre><code>0.0
+</code></pre>
+<pre><code class="python">print(FC(212))
+</code></pre>
+
+<pre><code>100.0
+</code></pre>
+<h4 id="step-6">Step 6</h4>
+<p>Refine to be useful
+- Modify the wrapper to be interactive</p>
+<pre><code class="python">def F2C(x) : # convert F to C
+    C = (x - 32)*5/9
+    return C
+# wrapper to run the F2C function
+yes = 0
+while yes == 0:
+    xvalue = input('Enter a temperature in Fairyheight')
+    try:
+        xvalue = float(xvalue)
+        yes = 1
+    except:
+        print('Enter a bloody number! Try again \n')
+# call the function, get value , write output
+yvalue = F2C(xvalue)
+print('Temp: ',xvalue,'F = ',yvalue,' C') # and we are done 
+</code></pre>
+
+<pre><code>Enter a temperature in Fairyheight -40
+
+
+Temp:  -40.0 F =  -40.0  C
+</code></pre>
+<h2 id="references">References</h2>
+<ol>
+<li>
+<p>Grus, Joel (2015-04-14). Data Science from Scratch: First Principles with Python
+(Kindle Locations 1190-1191). O'Reilly Media. Kindle Edition. </p>
+</li>
+<li>
+<p>Call Expressions in "Adhikari, A. and DeNero, J. Computational and Inferential Thinking The Foundations of Data Science" https://www.inferentialthinking.com/chapters/03/3/Calls.html</p>
+</li>
+<li>
+<p>Functions and Tables in "Adhikari, A. and DeNero, J. Computational and Inferential Thinking The Foundations of Data Science" https://www.inferentialthinking.com/chapters/08/Functions_and_Tables.html</p>
+</li>
+<li>
+<p>Visualization in "Adhikari, A. and DeNero, J. Computational and Inferential Thinking The Foundations of Data Science" https://www.inferentialthinking.com/chapters/07/Visualization.html</p>
+</li>
+<li>
+<p>Documentation; The Python Standard Library; 9. Numeric and Mathematical Modules https://docs.python.org/2/library/math.html</p>
+</li>
+<li>
+<p>Code.org; Chris Bosh of Miami Heat and Jess Lee CEO of Polyvore. Let's use code to join Anna and Elsa as they explore the magic and beauty of ice. https://youtu.be/0eo0ESEX9DE</p>
+</li>
+<li>
+<p>ENGR-1330 Functions and Variable Scope (Fall 2020) https://3.137.111.182/engr-1330-webroot/1-Lessons/Lesson05/OriginalPowerpoint/PythonFunctions-VariableScope-ENGR1330-CTwithDS.pdf</p>
+</li>
+</ol></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" defer></script>
+        <script src="../../../mathjaxhelper.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

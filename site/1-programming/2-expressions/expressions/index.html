@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>Expressions - P4E</title>
+        <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../../..">P4E</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="../../..">Home</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Programming <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li class="active">
+    <a href="./">Expressions</a>
+</li>
+                                    
+<li >
+    <a href="../../3-datatypes/datatypes/">Data Types</a>
+</li>
+                                    
+<li >
+    <a href="../../4-variables/variables/">Variables</a>
+</li>
+                                    
+<li >
+    <a href="../../5-mutabledatastructures/mutabledatastructures/">Data Structures (mutable)</a>
+</li>
+                                    
+<li >
+    <a href="../../6-immutabledatastructures/immutabledatastructures/">Data Structures (immutable)</a>
+</li>
+                                    
+<li >
+    <a href="../../7-userinteraction/userinteraction/">User Interaction</a>
+</li>
+                                    
+<li >
+    <a href="../../8-algorithmbuildingblocks/algorithmbuildingblocks/">Algorithm Building Blocks</a>
+</li>
+                                    
+<li >
+    <a href="../../9-sequentialstructures/sequentialstructures/">Sequential Structures</a>
+</li>
+                                    
+<li >
+    <a href="../../10-selectionstructures/selectionstructures/">Selection Structures</a>
+</li>
+                                    
+<li >
+    <a href="../../11-repetitionstructures/ccrepetitionstructures/">Count Controlled Repetition</a>
+</li>
+                                    
+<li >
+    <a href="../../11-repetitionstructures/screpetitionstructures/">Sentinel Controlled Repetition</a>
+</li>
+                                    
+<li >
+    <a href="../../13-functions/functions/">Functions</a>
+</li>
+                                    
+<li >
+    <a href="../../14-externalmodules/externalmodules/">External Modules</a>
+</li>
+                                    
+<li >
+    <a href="../../15-workingwithfiles/workingwithfiles/">Working With Files</a>
+</li>
+                                    
+<li >
+    <a href="../../16-morefilemanipulation/morefilemanipulation/">More File Manipulation</a>
+</li>
+                                    
+<li >
+    <a href="../../17-workingwitharray/workingwitharray/">Working with ARRAY</a>
+</li>
+                                    
+<li >
+    <a href="../../18-arrayprocessingwithnumpy/arrayprocessingwithnumpy/">Array processing with NUMPY</a>
+</li>
+                                    
+<li >
+    <a href="../../19-databaseconcepts/databaseconcepts/">Database Concepts</a>
+</li>
+                                    
+<li >
+    <a href="../../20-databaseprocessingwithpandas/databaseprocessingwithpandas/">Database processing with PANDAS</a>
+</li>
+                                    
+<li >
+    <a href="../../21-visualdisplayofdata/visualdisplayofdata/">Visual Display of Data</a>
+</li>
+                                    
+<li >
+    <a href="../../22-plottingwithmatplotlab/plottingwithmatplotlab/">Plotting with MATPLOTLAB</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Data Modeling <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../2-datamodeling/23-datamodelsandvisualization/datamodelsandvisualization/">Data Models and Visualization</a>
+</li>
+                                </ul>
+                            </li>
+                            <li >
+                                <a href="../../../readings.md">Additional Readings</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="../../..">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../../3-datatypes/datatypes/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#expressions">Expressions</a></li>
+            <li><a href="#fundamental-operators">Fundamental Operators</a></li>
+            <li><a href="#arithmetic-expressions">arithmetic expressions</a></li>
+            <li><a href="#simple-output-print">simple output: print()</a></li>
+            <li><a href="#readings">Readings</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="expressions">Expressions</h1>
+<p>Consider the relativistic equation relating energy, mass, and the speed of light </p>
+<p>
+<script type="math/tex; mode=display"> e = m \cdot c^2 </script>
+</p>
+<p>In this equation the symbols <script type="math/tex">e</script>,<script type="math/tex">m</script>,<script type="math/tex">c</script>,<script type="math/tex">=</script>,<script type="math/tex">\cdot</script>, and the structure is parsed from left to right. The entire equation is an statement that instructs: place into the container named <script type="math/tex">e</script> the result of the product of the contents of containers <script type="math/tex">m</script> and <script type="math/tex">c^2</script>.  </p>
+<p>In the above statement the symbols <script type="math/tex">e</script>,<script type="math/tex">m</script>,<script type="math/tex">c</script> are names for things that can have values -- we will call these containers (or variables, or named constants).  The symbols <script type="math/tex">=</script>,<script type="math/tex">\cdot</script>, and <script type="math/tex">~^2</script> are instructions for various arithmetic operations -- we will call these operators.  </p>
+<p>The part of the statement to the right of the <script type="math/tex">=</script> symbol is an arithmetic expression.</p>
+<p>When we attempt to write and execute python scripts - we will make various mistakes; these will generate warnings and errors, which we will repair to make a working program.</p>
+<p>Consider our statement with the container names spelled out:</p>
+<pre><code class="python"># Example 
+Energy = Mass * SpeedOfLight**2 
+</code></pre>
+
+<pre><code>---------------------------------------------------------------------------
+
+NameError                                 Traceback (most recent call last)
+
+&lt;ipython-input-4-1c1f1fa5363a&gt; in &lt;module&gt;
+      1 #clear all variables# Example
+----&gt; 2 Energy = Mass * SpeedOfLight**2
+
+
+NameError: name 'Mass' is not defined
+</code></pre>
+<p>Notice how the interpreter tells us that Mass is undefined - so a simple fix is to define it and try again</p>
+<pre><code class="python"># Example 
+Mass = 1000000
+Energy = Mass * SpeedOfLight**2 
+</code></pre>
+
+<pre><code>---------------------------------------------------------------------------
+
+NameError                                 Traceback (most recent call last)
+
+&lt;ipython-input-5-a4a52966e6df&gt; in &lt;module&gt;
+      1 # Example
+      2 Mass = 1000000
+----&gt; 3 Energy = Mass * SpeedOfLight**2
+
+
+NameError: name 'SpeedOfLight' is not defined
+</code></pre>
+<p>Notice how the interpreter now tells us that SpeedOfLight is undefined - so a simple fix is to define it and try again</p>
+<pre><code class="python"># Example 
+Mass = 1000000  #kilograms
+SpeedOfLight = 299792458  #meters per second
+Energy = Mass * SpeedOfLight**2 
+</code></pre>
+
+<p>Now the script ran without any reported errors, but we have not instructed the program on how to produce output.  To keep the example simple we will just add a generic print statement.</p>
+<pre><code class="python"># Example 
+Mass = 1000000  #kilograms
+SpeedOfLight = 299792458  #meters per second
+Energy = Mass * SpeedOfLight**2 
+print(&quot;Energy is:&quot;, Energy, &quot;Newton meters&quot;)
+</code></pre>
+
+<pre><code>Energy is: 89875517873681764000000 Newton meters
+</code></pre>
+<h2 id="fundamental-operators">Fundamental Operators</h2>
+<h3 id="assignment-operator">Assignment Operator</h3>
+<p>The <code>=</code> sign used in a statement is called an assignment operator (or assignment sign). 
+The symbol means that the expression to the right of the symbol is to be evaluated and the result placed into the variable on the left side of the symbol.  The "operation" is assignment, the "=" symbol is the operator name.</p>
+<p>Consider the script below</p>
+<pre><code class="python">x = 5  # assign constant 5 into a container named x 
+y = 10 # assign constant 10 into a containernamed x
+print (x,y) # print the contents of containers x and y
+x=y # put contents of y into x
+print (x,y) # print the contents of containers x and y
+</code></pre>
+
+<pre><code>5 10
+10 10
+</code></pre>
+<h3 id="arithmetic-operators">Arithmetic Operators</h3>
+<p>In addition to assignment we can also perform arithmetic operations on containers. The
+fundamental arithmetic operators are:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Symbol</th>
+<th align="left">Meaning</th>
+<th align="left">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">=</td>
+<td align="left">Assignment</td>
+<td align="left">x=3 Assigns value of 3 to x.</td>
+</tr>
+<tr>
+<td align="left">+</td>
+<td align="left">Addition</td>
+<td align="left">x+y Adds values in x and y.</td>
+</tr>
+<tr>
+<td align="left">-</td>
+<td align="left">Subtraction</td>
+<td align="left">x-y Subtracts values in y from x.</td>
+</tr>
+<tr>
+<td align="left">*</td>
+<td align="left">Multiplication</td>
+<td align="left">x*y Multiplies values in x and y.</td>
+</tr>
+<tr>
+<td align="left">/</td>
+<td align="left">Division</td>
+<td align="left">x/y Divides value in x by value in y.</td>
+</tr>
+<tr>
+<td align="left">//</td>
+<td align="left">Floor division</td>
+<td align="left">x//y Divide x by y, truncate result to whole number.</td>
+</tr>
+<tr>
+<td align="left">%</td>
+<td align="left">Modulus</td>
+<td align="left">x%y Returns remainder when x is divided by y.</td>
+</tr>
+<tr>
+<td align="left">**</td>
+<td align="left">Exponentation</td>
+<td align="left">x <strong> y Raises value in x by value in y. ( e.g. x </strong> y)</td>
+</tr>
+<tr>
+<td align="left">+=</td>
+<td align="left">Additive assignment</td>
+<td align="left">x+=2 Equivalent to x = x+2.</td>
+</tr>
+<tr>
+<td align="left">-=</td>
+<td align="left">Subtractive assignment</td>
+<td align="left">x-=2 Equivalent to x = x-2.</td>
+</tr>
+<tr>
+<td align="left">*=</td>
+<td align="left">Multiplicative assignment</td>
+<td align="left">x*=3 Equivalent to x = x*3.</td>
+</tr>
+<tr>
+<td align="left">/=</td>
+<td align="left">Divide assignment</td>
+<td align="left">x/3 Equivalent to x = x/3.</td>
+</tr>
+</tbody>
+</table>
+<p>Run the script in the next cell for some illustrative results</p>
+<h2 id="arithmetic-expressions">arithmetic expressions</h2>
+<pre><code class="python"># Uniary Arithmetic Operators
+x = 10
+y = 5
+print(x, y)
+print(x+y)
+print(x-y)
+print(x*y)
+print(x/y)
+print((x+1)//y)
+print((x+1)%y)
+print(x**y)
+</code></pre>
+
+<pre><code>10 5
+15
+5
+50
+2.0
+2
+1
+100000
+</code></pre>
+<pre><code class="python"># Arithmetic assignment operators
+x = 1
+x += 2
+print(type(x),x)
+x = 1
+x -= 2
+print(type(x),x)
+x = 1
+x *=3
+print(type(x),x)
+x = 10
+x /= 2
+print(type(x),x)  # Interesting what division does to variable type
+</code></pre>
+
+<pre><code>&lt;class 'int'&gt; 3
+&lt;class 'int'&gt; -1
+&lt;class 'int'&gt; 3
+&lt;class 'float'&gt; 5.0
+</code></pre>
+<h2 id="simple-output-print">simple output: print()</h2>
+<h2 id="readings">Readings</h2>
+<p>Learn Python in One Day and Learn It Well. Python for Beginners with Hands-on Project. (Learn Coding Fast with Hands-On Project Book -- Kindle Edition by LCF Publishing (Author), Jamie Chan <a href="https://www.amazon.com/Python-2nd-Beginners-Hands-Project-ebook/dp/B071Z2Q6TQ/ref=sr_1_3?dchild=1&amp;keywords=learn+python+in+a+day&amp;qid=1611108340&amp;sr=8-3">https://www.amazon.com/Python-2nd-Beginners-Hands-Project-ebook/dp/B071Z2Q6TQ/ref=sr_1_3?dchild=1&amp;keywords=learn+python+in+a+day&amp;qid=1611108340&amp;sr=8-3</a></p>
+<pre><code class="python">
+</code></pre></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" defer></script>
+        <script src="../../../mathjaxhelper.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

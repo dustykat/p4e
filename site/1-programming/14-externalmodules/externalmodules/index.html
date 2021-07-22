@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>External Modules - P4E</title>
+        <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../../..">P4E</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="../../..">Home</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Programming <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../2-expressions/expressions/">Expressions</a>
+</li>
+                                    
+<li >
+    <a href="../../3-datatypes/datatypes/">Data Types</a>
+</li>
+                                    
+<li >
+    <a href="../../4-variables/variables/">Variables</a>
+</li>
+                                    
+<li >
+    <a href="../../5-mutabledatastructures/mutabledatastructures/">Data Structures (mutable)</a>
+</li>
+                                    
+<li >
+    <a href="../../6-immutabledatastructures/immutabledatastructures/">Data Structures (immutable)</a>
+</li>
+                                    
+<li >
+    <a href="../../7-userinteraction/userinteraction/">User Interaction</a>
+</li>
+                                    
+<li >
+    <a href="../../8-algorithmbuildingblocks/algorithmbuildingblocks/">Algorithm Building Blocks</a>
+</li>
+                                    
+<li >
+    <a href="../../9-sequentialstructures/sequentialstructures/">Sequential Structures</a>
+</li>
+                                    
+<li >
+    <a href="../../10-selectionstructures/selectionstructures/">Selection Structures</a>
+</li>
+                                    
+<li >
+    <a href="../../11-repetitionstructures/ccrepetitionstructures/">Count Controlled Repetition</a>
+</li>
+                                    
+<li >
+    <a href="../../11-repetitionstructures/screpetitionstructures/">Sentinel Controlled Repetition</a>
+</li>
+                                    
+<li >
+    <a href="../../13-functions/functions/">Functions</a>
+</li>
+                                    
+<li class="active">
+    <a href="./">External Modules</a>
+</li>
+                                    
+<li >
+    <a href="../../15-workingwithfiles/workingwithfiles/">Working With Files</a>
+</li>
+                                    
+<li >
+    <a href="../../16-morefilemanipulation/morefilemanipulation/">More File Manipulation</a>
+</li>
+                                    
+<li >
+    <a href="../../17-workingwitharray/workingwitharray/">Working with ARRAY</a>
+</li>
+                                    
+<li >
+    <a href="../../18-arrayprocessingwithnumpy/arrayprocessingwithnumpy/">Array processing with NUMPY</a>
+</li>
+                                    
+<li >
+    <a href="../../19-databaseconcepts/databaseconcepts/">Database Concepts</a>
+</li>
+                                    
+<li >
+    <a href="../../20-databaseprocessingwithpandas/databaseprocessingwithpandas/">Database processing with PANDAS</a>
+</li>
+                                    
+<li >
+    <a href="../../21-visualdisplayofdata/visualdisplayofdata/">Visual Display of Data</a>
+</li>
+                                    
+<li >
+    <a href="../../22-plottingwithmatplotlab/plottingwithmatplotlab/">Plotting with MATPLOTLAB</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Data Modeling <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../2-datamodeling/23-datamodelsandvisualization/datamodelsandvisualization/">Data Models and Visualization</a>
+</li>
+                                </ul>
+                            </li>
+                            <li >
+                                <a href="../../../readings.md">Additional Readings</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="../../13-functions/functions/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../../15-workingwithfiles/workingwithfiles/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#external-modules">External Modules</a></li>
+            <li><a href="#saving-code-as-a-separate-modulefile">Saving Code as a Separate Module/File</a></li>
+            <li><a href="#temperature-converter-example-repeated">Temperature Converter Example (Repeated)</a></li>
+            <li><a href="#rudimentary-graphics">Rudimentary Graphics</a></li>
+            <li><a href="#references">References</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="external-modules">External Modules</h1>
+<p>Modules, like functions are simply pre-written code fragments that perform a certain task. In older procedural languages modules and subroutines are similar concepts.</p>
+<p>An external module, is just a file that contains python code, that is imported into your script, then run as if it was part of the script all along. Consider the following code cells - and read the comments</p>
+<pre><code class="python">! ls -l # list contents of current directory
+</code></pre>
+
+<pre><code>total 716
+-rw-rw-r-- 1 sensei sensei 122771 Jul 22 14:27 base-functions.png
+-rw-rw-r-- 1 sensei sensei 194845 Jul 22 14:27 external-file-import-Copy1.png
+-rw-rw-r-- 1 sensei sensei 194845 Jul 22 14:27 external-file-import.png
+-rw-rw-r-- 1 sensei sensei  72197 Jul 22 14:31 externalmodules.ipynb
+-rw-rw-r-- 1 sensei sensei 113349 Jul 22 14:27 flow-control-diagram.png
+-rw-rw-r-- 1 sensei sensei  17790 Jul 22 14:27 functions.md
+-rw-rw-r-- 1 sensei sensei   4066 Jul 22 14:27 index.html
+-rw-rw-r-- 1 sensei sensei    174 Jul 22 14:27 mylibrary.py
+</code></pre>
+<pre><code class="python">! cat mylibrary.py # list contents of file named mylibrary.py
+</code></pre>
+
+<pre><code>def neko(input_argument) :
+     import math #ok to import into a function
+     local_variable = input_argument * math.sqrt(abs(1.0+input_argument))
+     return local_variable
+</code></pre>
+<pre><code class="python">import mylibrary # iPython assumes the extension .py
+# wrapper to run the neko function
+yes = 0
+while yes == 0:
+    xvalue = input('enter a numeric value')
+    try:
+        xvalue = float(xvalue)
+        yes = 1
+    except:
+        print('enter a bloody number! Try again \n')
+# call the function, get value , write output
+yvalue = mylibrary.neko(xvalue) # here we call out external function
+print('f(',xvalue,') = ',yvalue) # and we are done 
+</code></pre>
+
+<pre><code>enter a numeric value 2
+
+
+f( 2.0 ) =  3.4641016151377544
+</code></pre>
+<p>In JupyterHub environments, you may discover that changes you make to your external python file are not reflected when you re-run your script; you need to restart the kernel to get the changes to actually update. The figure below depicts the notebook, external file relatonship</p>
+<p><img alt="" src="../external-file-import.png" /></p>
+<p>This relationship is levereged when we build oor own libraries as illustrated next.</p>
+<hr />
+<h2 id="saving-code-as-a-separate-modulefile">Saving Code as a Separate Module/File</h2>
+<p>Above we imported the <code>neko()</code> function.</p>
+<p>Here we will create a new function, export it to a file, so we can reuse it in later notebooks without having to retype or cut-and-paste. The <code>dusty()</code> function evaluates:</p>
+<p>
+<script type="math/tex; mode=display">f(x) = x\sqrt{|(1 + x)|}</script>
+</p>
+<p>Its the same as the <code>neko()</code> function.</p>
+<ol>
+<li>Create a text file named "mydusty.txt"</li>
+<li>Copy the <code>dusty()</code> function script below into that file.<pre><code>def dusty(input_argument) :
+    import math #ok to import into a function
+    local_variable = input_argument * math.sqrt(abs(1.0+input_argument))
+    return local_variable
+</code></pre>
+</li>
+</ol>
+<p><strong>Note: the cells below we build the file directly on the server using bash (shell) commands; you would simply open the file in an editor and type the lines above. In lecture/lab we will use an editor to make the file</strong></p>
+<ol>
+<li>rename <code>mydusty.txt</code> to <code>mydusty.py</code>  (This is a bit unnecessary, but if your editor gats confused, make a .txt file then rename after populated)</li>
+<li>modify the wrapper script to use the dusty function as an external module</li>
+</ol>
+<pre><code class="python">! touch mydusty.txt # bash call to create an empty text file
+</code></pre>
+
+<pre><code class="python"># bash calls to populate the file, you would normally use a text editor to create the file
+! echo 'def dusty(input_argument) : ' &gt; line1.txt
+! echo '    import math #ok to import into a function'  &gt; line2.txt
+! echo '    local_variable = input_argument * math.sqrt(abs(1.0+input_argument))' &gt; line3.txt
+! echo '    return local_variable' &gt; line4.txt
+! cat line1.txt line2.txt line3.txt line4.txt &gt; mydusty.txt # build mydusty
+! rm -f line*.txt # remove the temp files
+! mv mydusty.txt mydusty.py # rename the populated file
+</code></pre>
+
+<pre><code class="python"># wrapper to run the dusty function
+import mydusty
+yes = 0
+while yes == 0:
+    xvalue = input('enter a numeric value')
+    try:
+        xvalue = float(xvalue)
+        yes = 1
+    except:
+        print('enter a bloody number! Try again \n')
+# call the function, get value , write output
+yvalue = mydusty.dusty(xvalue)
+print('f(',xvalue,') = ',yvalue) # and we are done 
+</code></pre>
+
+<pre><code>enter a numeric value 2
+
+
+f( 2.0 ) =  3.4641016151377544
+</code></pre>
+<hr />
+<h2 id="temperature-converter-example-repeated">Temperature Converter Example (Repeated)</h2>
+<p>Create a Fahrenhiet to Celsius converter and test it for these values:</p>
+<ul>
+<li>32</li>
+<li>15</li>
+<li>100</li>
+</ul>
+<p>*hint: Formula-(°F − 32) × 5/9 = °C</p>
+<h3 id="problem-solving-process">Problem Solving Process</h3>
+<h4 id="step-1">Step 1</h4>
+<p>Define the problem (problem statement):
+- Create a tool to convert Fahrenhiet to Celsius</p>
+<h4 id="step-2">Step 2</h4>
+<p>Gather information (identify known and unknown values, and governing equations)
+- Known: Input in F
+- Unknown: Output in C
+- Governing Principles: <em>Formula: (°F − 32) × 5/9 = °C</em></p>
+<h4 id="step-3">Step 3</h4>
+<p>Generate and evaluate potential solutions
+- -40F = -40C
+- 32F = 0C
+- 212F = 100C</p>
+<h4 id="step-4">Step 4</h4>
+<p>Refine and implement a solution
+1. Create function to evaluate input and produce output</p>
+<pre><code class="python">def FC(x) : # convert F to C
+    C = (x - 32)*5/9
+    return C
+</code></pre>
+
+<ol>
+<li>Create wrapper to prompt for input, execute function, label output</li>
+</ol>
+<pre><code class="python">print(FC(99))
+</code></pre>
+
+<pre><code>37.22222222222222
+</code></pre>
+<h4 id="step-5">Step 5</h4>
+<p>Verify and test the solution.</p>
+<pre><code class="python">print(FC(-40))
+</code></pre>
+
+<pre><code>-40.0
+</code></pre>
+<pre><code class="python">print(FC(32))
+</code></pre>
+
+<pre><code>0.0
+</code></pre>
+<pre><code class="python">print(FC(212))
+</code></pre>
+
+<pre><code>100.0
+</code></pre>
+<h4 id="step-6">Step 6</h4>
+<p>Refine to be useful
+- Modify the wrapper to be interactive</p>
+<pre><code class="python">def F2C(x) : # convert F to C
+    C = (x - 32)*5/9
+    return C
+# wrapper to run the F2C function
+yes = 0
+while yes == 0:
+    xvalue = input('Enter a temperature in Fairyheight')
+    try:
+        xvalue = float(xvalue)
+        yes = 1
+    except:
+        print('Enter a bloody number! Try again \n')
+# call the function, get value , write output
+yvalue = F2C(xvalue)
+print('Temp: ',xvalue,'F = ',yvalue,' C') # and we are done 
+</code></pre>
+
+<pre><code>Enter a temperature in Fairyheight -40
+
+
+Temp:  -40.0 F =  -40.0  C
+</code></pre>
+<ul>
+<li>Save the function into an external module "myConversions.py"</li>
+</ul>
+<pre><code class="python"># bash calls to populate the file, you would normally use a text editor to create the file
+! echo 'def F2C(x) : # convert F to C' &gt; line1.txt
+! echo '    C = (x - 32)*5/9'          &gt; line2.txt
+! echo '    return C'                  &gt; line3.txt
+! cat line1.txt line2.txt line3.txt    &gt; myConversions.py # build &quot;myConversions.py&quot;
+! rm -f line*.txt # remove the temp files
+</code></pre>
+
+<pre><code class="python">! cat myConversions.py # list contents of the file
+</code></pre>
+
+<pre><code>def F2C(x) : # convert F to C
+    C = (x - 32)*5/9
+    return C
+</code></pre>
+<pre><code class="python">import myConversions
+# wrapper to run the F2C function
+yes = 0
+while yes == 0:
+    xvalue = input('Enter a temperature in Fairyheight')
+    try:
+        xvalue = float(xvalue)
+        yes = 1
+    except:
+        print('Enter a bloody number! Try again \n')
+# call the function, get value , write output
+yvalue = myConversions.F2C(xvalue)
+print('Temp: ',xvalue,'F = ',yvalue,' C') # and we are done 
+</code></pre>
+
+<pre><code>Enter a temperature in Fairyheight -40
+
+
+Temp:  -40.0 F =  -40.0  C
+</code></pre>
+<h2 id="rudimentary-graphics">Rudimentary Graphics</h2>
+<p>We can use external modules and function to make things other than strings and numbers for example consider making a script to that draws a straight line between two points and presents it as a plot.</p>
+<p>The external module is named <code>matplotlib.pyplot</code> and is imported in the function body, then we prompt for vertex locations <code>(x1,y1)</code> and <code>(x2,y2)</code> then draw the plot.  Notice a null return statement which will return control to the main program.</p>
+<pre><code class="python">def drawAline():
+    import matplotlib.pyplot  # import the plotting library from matplotlib
+    x1 = int(input('Please enter x value for point 1'))
+    y1 = int(input('Please enter y value for point 1'))
+    x2 = int(input('Please enter x value for point 2'))
+    y2 = int(input('Please enter y value for point 2'))
+    xlist = [x1,x2]
+    ylist = [y1,y2]
+    matplotlib.pyplot.plot(xlist, ylist, color ='orange', marker ='*', linestyle ='solid') 
+    #matplotlib.pyplot.title(strtitle)# add a title
+    matplotlib.pyplot.ylabel(&quot;Y-axis&quot;)# add a label to the x and y-axes
+    matplotlib.pyplot.xlabel(&quot;X-axis&quot;)
+    matplotlib.pyplot.show() # display the plot
+    return #null return
+</code></pre>
+
+<pre><code class="python">drawAline()
+</code></pre>
+
+<pre><code>Please enter x value for point 1 1
+Please enter y value for point 1 1
+Please enter x value for point 2 2
+Please enter y value for point 2 2
+</code></pre>
+<p><img alt="png" src="../output_26_1.png" /></p>
+<p>Now lets put the plotting script into a function so we can make line charts of any two numeric lists</p>
+<h2 id="references">References</h2>
+<ol>
+<li>
+<p>Grus, Joel (2015-04-14). Data Science from Scratch: First Principles with Python
+(Kindle Locations 1190-1191). O'Reilly Media. Kindle Edition. </p>
+</li>
+<li>
+<p>Call Expressions in "Adhikari, A. and DeNero, J. Computational and Inferential Thinking The Foundations of Data Science" https://www.inferentialthinking.com/chapters/03/3/Calls.html</p>
+</li>
+<li>
+<p>Functions and Tables in "Adhikari, A. and DeNero, J. Computational and Inferential Thinking The Foundations of Data Science" https://www.inferentialthinking.com/chapters/08/Functions_and_Tables.html</p>
+</li>
+<li>
+<p>Visualization in "Adhikari, A. and DeNero, J. Computational and Inferential Thinking The Foundations of Data Science" https://www.inferentialthinking.com/chapters/07/Visualization.html</p>
+</li>
+<li>
+<p>Documentation; The Python Standard Library; 9. Numeric and Mathematical Modules https://docs.python.org/2/library/math.html</p>
+</li>
+</ol>
+<pre><code class="python">
+</code></pre></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" defer></script>
+        <script src="../../../mathjaxhelper.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

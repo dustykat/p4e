@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>User Interaction - P4E</title>
+        <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../../..">P4E</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="../../..">Home</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Programming <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../2-expressions/expressions/">Expressions</a>
+</li>
+                                    
+<li >
+    <a href="../../3-datatypes/datatypes/">Data Types</a>
+</li>
+                                    
+<li >
+    <a href="../../4-variables/variables/">Variables</a>
+</li>
+                                    
+<li >
+    <a href="../../5-mutabledatastructures/mutabledatastructures/">Data Structures (mutable)</a>
+</li>
+                                    
+<li >
+    <a href="../../6-immutabledatastructures/immutabledatastructures/">Data Structures (immutable)</a>
+</li>
+                                    
+<li class="active">
+    <a href="./">User Interaction</a>
+</li>
+                                    
+<li >
+    <a href="../../8-algorithmbuildingblocks/algorithmbuildingblocks/">Algorithm Building Blocks</a>
+</li>
+                                    
+<li >
+    <a href="../../9-sequentialstructures/sequentialstructures/">Sequential Structures</a>
+</li>
+                                    
+<li >
+    <a href="../../10-selectionstructures/selectionstructures/">Selection Structures</a>
+</li>
+                                    
+<li >
+    <a href="../../11-repetitionstructures/ccrepetitionstructures/">Count Controlled Repetition</a>
+</li>
+                                    
+<li >
+    <a href="../../11-repetitionstructures/screpetitionstructures/">Sentinel Controlled Repetition</a>
+</li>
+                                    
+<li >
+    <a href="../../13-functions/functions/">Functions</a>
+</li>
+                                    
+<li >
+    <a href="../../14-externalmodules/externalmodules/">External Modules</a>
+</li>
+                                    
+<li >
+    <a href="../../15-workingwithfiles/workingwithfiles/">Working With Files</a>
+</li>
+                                    
+<li >
+    <a href="../../16-morefilemanipulation/morefilemanipulation/">More File Manipulation</a>
+</li>
+                                    
+<li >
+    <a href="../../17-workingwitharray/workingwitharray/">Working with ARRAY</a>
+</li>
+                                    
+<li >
+    <a href="../../18-arrayprocessingwithnumpy/arrayprocessingwithnumpy/">Array processing with NUMPY</a>
+</li>
+                                    
+<li >
+    <a href="../../19-databaseconcepts/databaseconcepts/">Database Concepts</a>
+</li>
+                                    
+<li >
+    <a href="../../20-databaseprocessingwithpandas/databaseprocessingwithpandas/">Database processing with PANDAS</a>
+</li>
+                                    
+<li >
+    <a href="../../21-visualdisplayofdata/visualdisplayofdata/">Visual Display of Data</a>
+</li>
+                                    
+<li >
+    <a href="../../22-plottingwithmatplotlab/plottingwithmatplotlab/">Plotting with MATPLOTLAB</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Data Modeling <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../2-datamodeling/23-datamodelsandvisualization/datamodelsandvisualization/">Data Models and Visualization</a>
+</li>
+                                </ul>
+                            </li>
+                            <li >
+                                <a href="../../../readings.md">Additional Readings</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="../../6-immutabledatastructures/immutabledatastructures/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../../8-algorithmbuildingblocks/algorithmbuildingblocks/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#user-interaction">User Interaction</a></li>
+            <li><a href="#the-input-method">The input() method</a></li>
+            <li><a href="#the-print-method">The print() method</a></li>
+            <li><a href="#the-operator">The % operator</a></li>
+            <li><a href="#the-format-method">The format() method</a></li>
+            <li><a href="#triple-quotes">Triple quotes</a></li>
+            <li><a href="#escape-characters">Escape Characters</a></li>
+            <li><a href="#readings">Readings</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="user-interaction">User Interaction</h1>
+<p>Until this point we have explicitly specified input values for variables (and constants) in a script; now lets leverage intrinsic functions that lets us makes use of variables. We’ll revisit earlier examples, but this time we’ll make them interactive. Instead of just computing and sending output, we want read into variables values that may change from time to time. In order to do that, our script needs to be able to prompt us for information and display them on the screen.</p>
+<p>This whole process is the essence of user interaction, and from the simple examples herein, one builds more complex scripts.</p>
+<h2 id="the-input-method">The <code>input()</code> method</h2>
+<p>Consider and run the script below</p>
+<pre><code class="python">MyName=input('What is your name ?')
+print(MyName)
+</code></pre>
+
+<pre><code>What is your name ? Jimmy Johns
+
+
+Jimmy Johns
+</code></pre>
+<p>The <code>input</code> method sent the string 'What is your name ?' to the screen, and then waited for the user to reply.  Upon reply, the input supplied was captured and then placed into the variable named <code>MyName</code>. </p>
+<p>Then the next statement, used the <code>print()</code> method to print the contents of <code>MyName</code> back to the screen.  From this simple structure we can create quite useful input and output. </p>
+<p>As a matter of good practice, we should explicitly type the input variable, as shown below which takes the input stream and converts it into a string.</p>
+<pre><code class="python">MyName=str(input('What is your name ?'))
+print(MyName)
+</code></pre>
+
+<pre><code>What is your name ? Taco Bell
+
+
+Taco Bell
+</code></pre>
+<p>Below we prompt for a second input, in this case the user's age, which will be put into an integer.  As a sdie note, we are not error checking, so if an input stream that cannot be made into an integer is suppplied we will get an exception warning or an error message.</p>
+<pre><code class="python">MyAge=int(input('How old are you ? '))
+print(MyAge)
+</code></pre>
+
+<pre><code>How old are you ?  66
+
+
+66
+</code></pre>
+<h2 id="the-print-method">The <code>print()</code> method</h2>
+<p>The <code>print()</code> function is used to display information to users. 
+It accepts zero or more expressions as parameters, separated by commas. </p>
+<p>Consider the statement below, how many parameters are in the parameter list?</p>
+<pre><code class="python">print (&quot;Hello World, my name is&quot;, MyName, &quot;and I am&quot;, MyAge, &quot;years old.&quot;)
+</code></pre>
+
+<pre><code>Hello World, my name is Taco Bell and I am 66 years old.
+</code></pre>
+<p>There are five parameters;</p>
+<ol>
+<li>"Hello World, my name is"</li>
+<li>MyName</li>
+<li>"and I am"</li>
+<li>MyAge</li>
+<li>"years old"</li>
+</ol>
+<p>Three of the parameters are string literals and are enclosed in quote marks, two are variables that are rendered as strings.</p>
+<h2 id="the-operator">The <code>%</code> operator</h2>
+<p>Strings can be formatted using the <code>%</code> operator. This gives you greater control over how you want your string to be displayed and stored. The syntax for using the <code>%</code> operator is “string to be formatted” %(values or variables to be inserted into string, separated by commas)</p>
+<p>An example using the string constructor (<code>%</code>) form using a placeholder in the print function call is:</p>
+<pre><code class="python">print (&quot;Hello World, my name is %s and I am %s years old.&quot; %(MyName,MyAge))
+</code></pre>
+
+<pre><code>Hello World, my name is Taco Bell and I am 66 years old.
+</code></pre>
+<p>Notice the syntax above.  The contents of the two variables are placed in the locations within the string indicated by the <code>%s</code> symbol, the tuple (MyName,MyAge) is parsed using this placeholder and converted into a string by the trailing <code>s</code> in the <code>%s</code> indicator.</p>
+<p>See what happens if we change the second <code>%s</code> into <code>%f</code> and run the script:</p>
+<pre><code class="python">print (&quot;Hello World, my name is %s and I am %f years old.&quot; %(MyName,MyAge))
+</code></pre>
+
+<pre><code>Hello World, my name is Taco Bell and I am 66.000000 years old.
+</code></pre>
+<p>The change to <code>%f</code> turns the rendered tuple value into a float.  Using these structures gives us a lot of output flexibility.</p>
+<h2 id="the-format-method">The <code>format()</code> method</h2>
+<p>Similar to the <code>%</code>operator structure there is a <code>format()</code> method.  Using the same example, the <code>%s</code> symbol is replaced by a pair of curly brackets <code>{}</code> playing the same placeholder role, and the <code>format</code> keyword precedes the tuple as</p>
+<pre><code class="python">print (&quot;Hello World, my name is {} and I am {} years old.&quot;.format(MyName,MyAge))
+</code></pre>
+
+<pre><code>Hello World, my name is Taco Bell and I am 66 years old.
+</code></pre>
+<p>Observe the keyword <code>format</code> is joined to the string with a dot notation, because <code>format</code> is a formal method associated with all strings, and it attached when the string literal is created.</p>
+<p>In this example the arguments to the method are the two variables, but other arguments and decorators are possible allowing for elaborate outputs.</p>
+<h2 id="triple-quotes">Triple quotes</h2>
+<p>If you need to display a long message, you can use the triple-quote symbol (‘’’ or “””) to span the  message over multiple lines. For instance:</p>
+<pre><code class="python">print ('''Hello World, my name is {} and I am a resturant
+that is over {} years old. We serve sodium chloride infused 
+lipids in a variety of shapes'''.format(MyName,MyAge))
+</code></pre>
+
+<pre><code>Hello World, my name is Taco Bell and I am a resturant
+that is over 66 years old. We serve sodium chloride infused 
+lipids in a variety of shapes
+</code></pre>
+<p>Creating an array that contains signed integer numbers</p>
+<h2 id="escape-characters">Escape Characters</h2>
+<p>Sometimes we may need to print some special “unprintable” characters such as a tab or a newline. 
+In this case, you need to use the <code>\</code> (backslash) character to escape characters that otherwise have a different meaning.  For instance to print a tab, we type the backslash character before the letter t, like this <code>\t</code> using our same example we have:</p>
+<pre><code class="python">print (&quot;Hello\t World, my name is {} and I am {} years old.&quot;.format(MyName,MyAge))
+</code></pre>
+
+<pre><code>Hello    World, my name is Taco Bell and I am 66 years old.
+</code></pre>
+<p>Here are a few more examples:</p>
+<pre><code class="python">#newline after World
+print (&quot;Hello World\n, my name is {} and I am {} years old.&quot;.format(MyName,MyAge)) 
+</code></pre>
+
+<pre><code>Hello World
+, my name is Taco Bell and I am 66 years old.
+</code></pre>
+<pre><code class="python"># backslash after World
+print (&quot;Hello World\\, my name is {} and I am {} years old.&quot;.format(MyName,MyAge)) 
+</code></pre>
+
+<pre><code>Hello World\, my name is Taco Bell and I am 66 years old.
+</code></pre>
+<pre><code class="python"># embedded quotes in the string literal
+print (&quot;I am 5'9\&quot; tall&quot;) 
+</code></pre>
+
+<pre><code>I am 5'9" tall
+</code></pre>
+<p>If you do not want characters preceded by the <code>\</code> character to be interpreted as special characters, you can use raw strings by adding an <code>r</code> before the first quote. 
+For instance, if you do not want <code>\t</code> to be interpreted as a tab in the string literal "Hello\tWorld", you would type </p>
+<pre><code class="python">print(r&quot;Hello\tWorld&quot;)
+</code></pre>
+
+<pre><code>Hello\tWorld
+</code></pre>
+<h2 id="readings">Readings</h2>
+<ol>
+<li>
+<p>Learn Python in One Day and Learn It Well. Python for Beginners with Hands-on Project. (Learn Coding Fast with Hands-On Project Book -- Kindle Edition by LCF Publishing (Author), Jamie Chan <a href="https://www.amazon.com/Python-2nd-Beginners-Hands-Project-ebook/dp/B071Z2Q6TQ/ref=sr_1_3?dchild=1&amp;keywords=learn+python+in+a+day&amp;qid=1611108340&amp;sr=8-3">https://www.amazon.com/Python-2nd-Beginners-Hands-Project-ebook/dp/B071Z2Q6TQ/ref=sr_1_3?dchild=1&amp;keywords=learn+python+in+a+day&amp;qid=1611108340&amp;sr=8-3</a></p>
+</li>
+<li>
+<p>Learn Python the Hard Way (Online Book) (https://learnpythonthehardway.org/book/)  Recommended for beginners who want a complete course in programming with Python.</p>
+</li>
+<li>
+<p>How to Learn Python for Data Science, The Self-Starter Way (https://elitedatascience.com/learn-python-for-data-science) </p>
+</li>
+<li>
+<p>String Literals <a href="https://bic-berkeley.github.io/psych-214-fall-2016/string_literals.html">https://bic-berkeley.github.io/psych-214-fall-2016/string_literals.html</a></p>
+</li>
+<li>
+<p>Tutorial on <code>input()</code> and <code>print()</code> functions <a href="https://www.programiz.com/python-programming/input-output-import">https://www.programiz.com/python-programming/input-output-import</a></p>
+</li>
+</ol>
+<pre><code class="python">
+</code></pre></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" defer></script>
+        <script src="../../../mathjaxhelper.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

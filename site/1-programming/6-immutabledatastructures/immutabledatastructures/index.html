@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>Data Structures (immutable) - P4E</title>
+        <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../../..">P4E</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="../../..">Home</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Programming <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../2-expressions/expressions/">Expressions</a>
+</li>
+                                    
+<li >
+    <a href="../../3-datatypes/datatypes/">Data Types</a>
+</li>
+                                    
+<li >
+    <a href="../../4-variables/variables/">Variables</a>
+</li>
+                                    
+<li >
+    <a href="../../5-mutabledatastructures/mutabledatastructures/">Data Structures (mutable)</a>
+</li>
+                                    
+<li class="active">
+    <a href="./">Data Structures (immutable)</a>
+</li>
+                                    
+<li >
+    <a href="../../7-userinteraction/userinteraction/">User Interaction</a>
+</li>
+                                    
+<li >
+    <a href="../../8-algorithmbuildingblocks/algorithmbuildingblocks/">Algorithm Building Blocks</a>
+</li>
+                                    
+<li >
+    <a href="../../9-sequentialstructures/sequentialstructures/">Sequential Structures</a>
+</li>
+                                    
+<li >
+    <a href="../../10-selectionstructures/selectionstructures/">Selection Structures</a>
+</li>
+                                    
+<li >
+    <a href="../../11-repetitionstructures/ccrepetitionstructures/">Count Controlled Repetition</a>
+</li>
+                                    
+<li >
+    <a href="../../11-repetitionstructures/screpetitionstructures/">Sentinel Controlled Repetition</a>
+</li>
+                                    
+<li >
+    <a href="../../13-functions/functions/">Functions</a>
+</li>
+                                    
+<li >
+    <a href="../../14-externalmodules/externalmodules/">External Modules</a>
+</li>
+                                    
+<li >
+    <a href="../../15-workingwithfiles/workingwithfiles/">Working With Files</a>
+</li>
+                                    
+<li >
+    <a href="../../16-morefilemanipulation/morefilemanipulation/">More File Manipulation</a>
+</li>
+                                    
+<li >
+    <a href="../../17-workingwitharray/workingwitharray/">Working with ARRAY</a>
+</li>
+                                    
+<li >
+    <a href="../../18-arrayprocessingwithnumpy/arrayprocessingwithnumpy/">Array processing with NUMPY</a>
+</li>
+                                    
+<li >
+    <a href="../../19-databaseconcepts/databaseconcepts/">Database Concepts</a>
+</li>
+                                    
+<li >
+    <a href="../../20-databaseprocessingwithpandas/databaseprocessingwithpandas/">Database processing with PANDAS</a>
+</li>
+                                    
+<li >
+    <a href="../../21-visualdisplayofdata/visualdisplayofdata/">Visual Display of Data</a>
+</li>
+                                    
+<li >
+    <a href="../../22-plottingwithmatplotlab/plottingwithmatplotlab/">Plotting with MATPLOTLAB</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Data Modeling <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../2-datamodeling/23-datamodelsandvisualization/datamodelsandvisualization/">Data Models and Visualization</a>
+</li>
+                                </ul>
+                            </li>
+                            <li >
+                                <a href="../../../readings.md">Additional Readings</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="../../5-mutabledatastructures/mutabledatastructures/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../../7-userinteraction/userinteraction/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#immutable-data-structures">Immutable Data Structures</a></li>
+            <li><a href="#tuple-a-special-list">Tuple - A special list</a></li>
+            <li><a href="#special-structures-sets">Special Structures: Sets</a></li>
+            <li><a href="#special-structures-arrays">Special Structures: Arrays</a></li>
+            <li><a href="#readings">Readings</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="immutable-data-structures">Immutable Data Structures</h1>
+<p>Data Structures are a specialized means of organizing and storing data in computers in such a way that we can perform operations on the stored data more effectively, and maintain the program easier.</p>
+<p>Here we are interested in tuples, which are <a href="https://www.dictionary.com/browse/mutable">immutable</a>, but quite useful.</p>
+<p><img alt="" src="../data-structures.png" /></p>
+<h2 id="tuple-a-special-list">Tuple - A special list</h2>
+<p>A tuple is a special kind of list where the <strong>values cannot be changed</strong> after the list is created.
+Such a property is called <code>immutable</code>
+It is useful for list-like things that are static - like days in a week, or months of a year.
+You declare a tuple like a list, except use round brackets instead of square brackets.</p>
+<pre><code class="python">MyTupleName = (&quot;Jan&quot;,&quot;Feb&quot;,&quot;Mar&quot;,&quot;Apr&quot;,&quot;May&quot;,&quot;Jun&quot;,&quot;Jul&quot;,&quot;Aug&quot;,&quot;Sep&quot;,&quot;Oct&quot;,&quot;Nov&quot;,&quot;Dec&quot;)
+print(MyTupleName)
+</code></pre>
+
+<pre><code>('Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec')
+</code></pre>
+<p>Tuples are often created as output from packages and functions, so often when using other's work you have to detect tupality and modify your script accordingly.</p>
+<p>You access the individual values of a tuple using their indexes, just like with a list.  </p>
+<pre><code class="python">print(MyTupleName[0])
+print(MyTupleName[-1])
+</code></pre>
+
+<pre><code>Jan
+Dec
+</code></pre>
+<p>Tuples can be leveraged using a concatenation type operation and a multiply (better to call it a repeat) operator as:</p>
+<pre><code class="python">print(MyTupleName + ('duodec','symjan')) # add to a tuple 
+print(MyTupleName[0:3]*2) #repeat a tuple
+'Dec' in MyTupleName # query a tuple - for  whole entry
+</code></pre>
+
+<pre><code>('Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec', 'duodec', 'symjan')
+('Jan', 'Feb', 'Mar', 'Jan', 'Feb', 'Mar')
+
+
+
+
+
+True
+</code></pre>
+<h2 id="special-structures-sets">Special Structures: Sets</h2>
+<p>Sets are used to store elements of different data types, they are similar to dictionaries with keys but no values (or the keys are the values)</p>
+<ul>
+<li>Unordered: Elements in a set cannot be indexed</li>
+<li>Mutable: Elements in a set can be altered</li>
+<li>Non-repetition: Elements in a set are unique</li>
+</ul>
+<p>Elements of a set are enclosed in curly brackets { } or created using the set() method.</p>
+<ul>
+<li>Creating sets that contains different data types</li>
+<li>Sets cannot be nested</li>
+</ul>
+<pre><code class="python">myset = {1:'one',2:'two',3:{1:'one',2:'two',3:'seven of nine'}}
+type(myset)
+</code></pre>
+
+<pre><code>dict
+</code></pre>
+<pre><code class="python">(myset.get(3)).get(3) # get element from key 3 of key 3 set
+</code></pre>
+
+<pre><code>'seven of nine'
+</code></pre>
+<pre><code class="python">myset = {1,2,77}
+type(myset)
+</code></pre>
+
+<pre><code>set
+</code></pre>
+<pre><code class="python">urset={'apple','cat','rock',77,'sunset strip'}
+type(urset)
+</code></pre>
+
+<pre><code>set
+</code></pre>
+<pre><code class="python"># union (join) sets
+print('union is : ' ,myset | urset)
+# intersection of sets (shared elements)
+print('intersection is : ' ,myset &amp; urset)
+</code></pre>
+
+<pre><code>union is :  {1, 2, 'apple', 'cat', 'sunset strip', 77, 'rock'}
+intersection is :  {77}
+</code></pre>
+<p>A good tutorial on sets and their use in python is <a href="https://realpython.com/python-sets/">https://realpython.com/python-sets/</a></p>
+<h4 id="whats-the-difference-between-a-set-and-dictionary">What's the difference between a set and dictionary?</h4>
+<p>From <a href="https://stackoverflow.com/questions/34370599/difference-between-dict-and-set-python">https://stackoverflow.com/questions/34370599/difference-between-dict-and-set-python</a></p>
+<p>"Well, a set is like a dict with keys but no values, and they're both implemented using a hash table. But yes, it's a little annoying that the <code>{}</code> notation denotes an empty <code>dict</code> rather than an empty <code>set</code>, but that's a historical artifact."</p>
+<h2 id="special-structures-arrays">Special Structures: Arrays</h2>
+<p>Arrays are lists that are used to store only elements of a specific data type</p>
+<ul>
+<li>Ordered: Elements in an array can be indexed</li>
+<li>Mutable: Elements in an array can be altered</li>
+</ul>
+<p><img alt="https://pi.lbbcdn.com/wp-content/uploads/2020/01/Python-Arrays-Index-example-diagram.png" src="https://pi.lbbcdn.com/wp-content/uploads/2020/01/Python-Arrays-Index-example-diagram.png" /></p>
+<p>Data type that an array must hold is specified using the type code when it is created
+- ‘f’ for float
+- ‘d’ for double
+- ‘i’ for signed int
+- ‘I’ for unsigned int</p>
+<p>More types are listed below</p>
+<table>
+<thead>
+<tr>
+<th align="left">Type Code</th>
+<th>C Data Type</th>
+<th>Python Data Type</th>
+<th align="right">Minimum Size in Bytes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">'b'</td>
+<td>signed char</td>
+<td>int</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td align="left">'B'</td>
+<td>unsigned char</td>
+<td>int</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td align="left">'h'</td>
+<td>signed short</td>
+<td>int</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td align="left">'H'</td>
+<td>unsigned short</td>
+<td>int</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td align="left">'i'</td>
+<td>signed int</td>
+<td>int</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td align="left">'I'</td>
+<td>unsigned int</td>
+<td>int</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td align="left">'l'</td>
+<td>signed long</td>
+<td>int</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td align="left">'L'</td>
+<td>unsigned long</td>
+<td>int</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td align="left">'q'</td>
+<td>signed long long</td>
+<td>int</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td align="left">'Q'</td>
+<td>unsigned long long</td>
+<td>int</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td align="left">'f'</td>
+<td>float</td>
+<td>float</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td align="left">'d'</td>
+<td>double</td>
+<td>float</td>
+<td align="right">8</td>
+</tr>
+</tbody>
+</table>
+<p>To use arrays, a library named ‘array’ must be imported (the library installs as part of core, so usually just an import is required)</p>
+<pre><code class="python">import array 
+</code></pre>
+
+<p>Creating an array that contains signed integer numbers</p>
+<pre><code class="python">myarray = array.array('i', [1, 2, 4, 8, 16, 32])
+</code></pre>
+
+<pre><code class="python">myarray[0] #1-st element, 0-th position
+</code></pre>
+
+<pre><code>1
+</code></pre>
+<p>Higher dimensional arrays (matrices) require a constructor type assembly, which is presented later. The numpy module simplifies higher dimensional array construction and is probably used the most.</p>
+<h2 id="readings">Readings</h2>
+<ol>
+<li>
+<p>Learn Python in One Day and Learn It Well. Python for Beginners with Hands-on Project. (Learn Coding Fast with Hands-On Project Book -- Kindle Edition by LCF Publishing (Author), Jamie Chan <a href="https://www.amazon.com/Python-2nd-Beginners-Hands-Project-ebook/dp/B071Z2Q6TQ/ref=sr_1_3?dchild=1&amp;keywords=learn+python+in+a+day&amp;qid=1611108340&amp;sr=8-3">https://www.amazon.com/Python-2nd-Beginners-Hands-Project-ebook/dp/B071Z2Q6TQ/ref=sr_1_3?dchild=1&amp;keywords=learn+python+in+a+day&amp;qid=1611108340&amp;sr=8-3</a></p>
+</li>
+<li>
+<p>Learn Python the Hard Way (Online Book) (https://learnpythonthehardway.org/book/)  Recommended for beginners who want a complete course in programming with Python.</p>
+</li>
+<li>
+<p>How to Learn Python for Data Science, The Self-Starter Way (https://elitedatascience.com/learn-python-for-data-science) </p>
+</li>
+<li>
+<p>Sets (tutorial) <a href="https://realpython.com/python-sets/">https://realpython.com/python-sets/</a></p>
+</li>
+<li>
+<p>Arrays (tutorial) <a href="https://www.geeksforgeeks.org/python-using-2d-arrays-lists-the-right-way/">https://www.geeksforgeeks.org/python-using-2d-arrays-lists-the-right-way/</a></p>
+</li>
+</ol>
+<pre><code class="python">
+</code></pre></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" defer></script>
+        <script src="../../../mathjaxhelper.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
