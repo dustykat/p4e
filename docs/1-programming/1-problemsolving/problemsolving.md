@@ -48,10 +48,11 @@ For actual computational methods the protocol becomes:
 1. Explicitly state the problem
 2. State:
 
-  - Input information
-  - Governing equations or principles, and 
-  - The required output information.
-  
+      - Input information
+      - Governing equations or principles, and 
+      - The required output information.
+
+
 3. Work a sample problem by-hand for testing the general solution.
 4. Develop a general solution method (coding).
 5. Test the general solution against the by-hand example, then apply to the real problem.
