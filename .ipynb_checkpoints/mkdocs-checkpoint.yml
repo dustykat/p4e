@@ -4,6 +4,8 @@ nav:
   - Home: index.md
 #  - About: about.md
   - Programming:
+     - Introduction: 1-programming/0-introduction/introduction.md
+     - Problem Solving: 1-programming/1-problemsolving/problemsolving.md
      - Expressions: 1-programming/2-expressions/expressions.md
      - Data Types: 1-programming/3-datatypes/datatypes.md
      - Variables: 1-programming/4-variables/variables.md
