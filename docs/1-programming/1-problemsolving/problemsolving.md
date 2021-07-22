@@ -7,9 +7,9 @@ Last GitHub Commit Date: 13 July 2021
 - decomposition
 - ccmr
 
-Download this page as a jupyter notebook at [http://54.243.252.9/p4e/1-programming/1-problemsolving/problemsolving.ipynb](http://54.243.252.9/p4e/1-programming/1-problemsolving/problemsolving.ipynb)
+Download this page as a jupyter notebook from [http://54.243.252.9/p4e/1-programming/1-problemsolving/problemsolving.ipynb](http://54.243.252.9/p4e/1-programming/1-problemsolving/problemsolving.ipynb)
 
-Download the data file referred to herein at [http://54.243.252.9/p4e/1-programming/1-problemsolving/data.txt](http://54.243.252.9/p4e/1-programming/1-problemsolving/data.txt)
+Download the data file referred to herein from [http://54.243.252.9/p4e/1-programming/1-problemsolving/data.txt](http://54.243.252.9/p4e/1-programming/1-problemsolving/data.txt)
 
 ## Computational Thinking and Problem Solving
 
@@ -27,7 +27,7 @@ CT is literally a process for breaking down a problem into smaller parts, lookin
 ## Programming as a problem solving process
 The entire point of this course is to develop problem solving skills and begin using some tools (Statistics, Numerical Methods, Data Science, implemented as JupyterLab/Python programs).
 
-The scientific method (https://en.wikipedia.org/wiki/Scientific_method) is one example of an effective problem solving strategy. Stated as a protocol it goes something like:
+The scientific method [https://en.wikipedia.org/wiki/Scientific_method](https://en.wikipedia.org/wiki/Scientific_method) is one example of an effective problem solving strategy. Stated as a protocol it goes something like:
 
 1. Observation: Formulation of a question
 2. Hypothesis: A  conjecture that may explain observed behavior. Falsifiable by an experiment whose outcome conflicts with predictions deduced from the hypothesis
@@ -58,7 +58,7 @@ For actual computational methods the protocol becomes:
 
 Oddly enough the first step is the most important and sometimes the most difficult. In a practical problem, step 2 is sometimes difficult because a skilled programmer is needed to translate the governing principles into an algorithm for the general solution (step 4).
 
-### Example 1 Problem Solving Process
+### Example 1 Compute an Arithmetic Mean
 
 Consider a need to compute an arithmetic mean, what would the process look like?
 
@@ -201,38 +201,23 @@ So the simple task of computing the mean of a collection of values, is a bit mor
 
 A lot of the problems we will encounter from a CT/DS perspective have already been solved, or at least analogs have been solved.  It is perfectly acceptable to use prior work for a new set of conditions as long as proper attribution is made.  We call this process CCMR:
 
-1. **Copy:** Find a solution to your problem from some online example:  SourceForge, StackOverflow, GeeksForGeeks, DigitalOcean, etc.
-2. **Cite:** Cite the original source.  In general a citation will look like one of the references below, but a URL to the source is sufficient at first.
+1. **Copy:** Find a solution to your problem from some online example:  `SourceForge`, `StackOverflow`, `GeeksForGeeks`, `DigitalOcean`, etc.
+2. **Cite:** Cite the original source.  In general a citation will look like one of the references below, but a `URL` to the source is sufficient at first.
 3. **Modify:** Modify the original cited work for your specific needs.  Note the changes in the code using comment statements.
 4. **Run:** Apply the modified code to the problem of interest. 
 
-In cases where we apply CCMR we are scaffolding parts (https://en.wikipedia.org/wiki/Scaffold_(programming)) - a legitimate and valuable engineering activity.
+In cases where we apply CCMR we are scaffolding parts [https://en.wikipedia.org/wiki/Scaffold_(programming)](https://en.wikipedia.org/wiki/Scaffold_(programming)) - a legitimate and valuable engineering activity.
 
 ## Readings
 
-Computational and Inferential Thinking Ani Adhikari and John DeNero, Computational and Inferential Thinking, The Foundations of Data Science, Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND) Chapter 1 https://www.inferentialthinking.com/chapters/01/what-is-data-science.html
+Computational and Inferential Thinking Ani Adhikari and John DeNero, Computational and Inferential Thinking, The Foundations of Data Science, Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND) Chapter 1 [https://www.inferentialthinking.com/chapters/01/what-is-data-science.html](https://www.inferentialthinking.com/chapters/01/what-is-data-science.html)
 
-Learn Python the Hard Way (Online Book) (https://learnpythonthehardway.org/book/)  Recommended for beginners who want a complete course in programming with Python.
+Learn Python the Hard Way (Online Book) [https://learnpythonthehardway.org/book/] (https://learnpythonthehardway.org/book/)  Recommended for beginners who want a complete course in programming with Python.
 
-LearnPython.org (Interactive Tutorial) (https://www.learnpython.org/)  Short, interactive tutorial for those who just need a quick way to pick up Python syntax.
+LearnPython.org (Interactive Tutorial) [https://www.learnpython.org/](https://www.learnpython.org/) Short, interactive tutorial for those who just need a quick way to pick up Python syntax.
 
-How to Think Like a Computer Scientist (Interactive Book) (https://runestone.academy/runestone/books/published/thinkcspy/index.html) Interactive "CS 101" course taught in Python that really focuses on the art of problem solving. 
+How to Think Like a Computer Scientist (Interactive Book) [https://runestone.academy/runestone/books/published/thinkcspy/index.html](https://runestone.academy/runestone/books/published/thinkcspy/index.html) Interactive "CS 101" course taught in Python that really focuses on the art of problem solving. 
 
-How to Learn Python for Data Science, The Self-Starter Way (https://elitedatascience.com/learn-python-for-data-science) 
-
-Theodore G. Cleveland, Farhang Forghanparast, Dinesh Sundaravadivelu Devarajan, Turgut Batuhan Baturalp (Batu), Tanja Karp, Long Nguyen, and Mona Rizvi. (2021) Computational Thinking and Data Science: A WebBook to Accompany ENGR 1330 at TTU, Whitacre College of Engineering, DOI (pending)[https://3.137.111.182/engr-1330-webroot/engr-1330-webbook/ctds-psuedocourse/site/](https://3.137.111.182/engr-1330-webroot/engr-1330-webbook/ctds-psuedocourse/site/)
+How to Learn Python for Data Science, The Self-Starter Way [https://elitedatascience.com/learn-python-for-data-science](https://elitedatascience.com/learn-python-for-data-science) 
 
 
-```python
-
-```
-
-
-```python
-
-```
-
-
-```python
-
-```
